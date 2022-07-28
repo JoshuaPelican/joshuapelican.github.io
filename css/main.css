@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Comfortaa:wght@700&display=swap");
+
+:root {
+  --primary-color: #0099ff;
+  --secondary-color: #0066cc;
+  --font-primary-color: #231f20;
+  --font-secondary-color: #f1f2f2;
+}
+
+body {
+  font-family: "Baloo 2";
+  background: var(--primary-color);
+  color: var(--font-secondary-color);
+  padding: 0;
+  margin: 0;
+}
+
+.BackgroundVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  z-index: -1;
+}
+
+.Logo {
+  width: 100px;
+  min-width: 100px;
+}
+
+.NavBar {
+  display: flex;
+  place-content: space-between;
+  padding: 1.5em;
+}
+
+.NavList {
+  list-style: none;
+  display: flex;
+  place-content: space-between;
+}
+
+a {
+  color: var(--font-color);
+  font-size: 2em;
+  padding: 0.1em 1em;
+  text-decoration: none;
+}
+
+.Hero {
+  display: flex;
+  place-content: center;
+  margin-bottom: 15em;
+}
+
+.CallToAction {
+  font-size: 2em;
+  text-align: center;
+  margin: 0 1em;
+}
+
+.Separator {
+  background: var(--secondary-color);
+  height: fit-content;
+  text-align: center;
+  margin: 0;
+}
+
+.Separator h1 {
+  margin: 0;
+}
+
+.Separator p {
+  margin: 0;
+  padding: 1em;
+}
+
+.ProjectPanel {
+  text-align: center;
+  background: var(--primary-color);
+  padding: 2em;
+  margin: 0;
+}
+
+.ProjectPanel h1 {
+  margin: 0;
+}
+
+.ProjectGrid {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  place-content: center;
+  padding: 0;
+}
+
+.ProjectItem {
+  background: var(--secondary-color);
+  min-width: 15em;
+  max-width: 25em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1em;
+  border-radius: 2em;
+  margin: 0.25em;
+}
+
+.ProjectItem h2 {
+  margin: 0.25em;
+}
+
+.ProjectItem img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.ProjectItem a {
+  display: inline-flex;
+  place-content: center;
+  margin: 0.25em;
+}
+
+.ProjectItem p {
+  margin: 0.25em;
+}
+
+.TagList {
+  display: flex;
+  flex-wrap: wrap;
+  place-content: space-between;
+  justify-content: center;
+  padding: 0;
+}
+
+.TagList li {
+  background: var(--secondary-color);
+  list-style: none;
+  text-align: center;
+  padding: 0.05em 0.5em;
+  margin: 0 0.1em;
+  height: fit-content;
+  width: fit-content;
+  white-space: nowrap;
+  border-radius: 100em;
+}
+
+li .CSharpTag {
+  background: var(--font-primary-color);
+}
+
+li .WebGLTag {
+  background: var(--font-primary-color);
+}
+
+.ResumePanel {
+  text-align: center;
+  background: var(--primary-color);
+  padding: 2em;
+  margin: 0;
+}
+
+.ResumePanel h1 {
+  margin: 0;
+}
+
+.PDFFrame {
+  border: none;
+  border-width: 0;
+  width: fit-content;
+  height: fit-content;
+  background: none;
+}
+
+@media (max-width: 786px) {
+  .NavList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    place-content: space-between;
+    margin: 0;
+  }
+}
