@@ -1,1 +1,1 @@
-# JoshuaPelican.github.io
+# joshuapelican.github.io
