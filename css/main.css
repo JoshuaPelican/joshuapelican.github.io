@@ -1,18 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Comfortaa:wght@700&display=swap");
 
 :root {
-  --primary-color: #0099ff;
-  --secondary-color: #0066cc;
-  --font-primary-color: #231f20;
-  --font-secondary-color: #f1f2f2;
+  --primary-base: #512da8;
+  --primary-dark: #140078;
+  --primary-light: #8558da;
+  --secondary-base: #ffb300;
+  --secondary-dark: #c68400;
+  --secondary-light: #ffe54c;
+  --font-primary: #000000;
+  --font-secondary: #ffffff;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-track{
+  background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb{
+  background: rgba(0, 0, 0, .25);
+}
+
+*{
+  scroll-behavior: smooth;
+  scrollbar-width: 0;
+  scroll-margin: 3.2em;
+  margin: 0;
 }
 
 body {
   font-family: "Baloo 2";
-  background: var(--primary-color);
-  color: var(--font-secondary-color);
+  background: var(--primary-base);
+  color: var(--font-secondary);
   padding: 0;
   margin: 0;
+  overflow: overlay;
 }
 
 .BackgroundVideo {
@@ -20,64 +44,75 @@ body {
   height: 100%;
   object-fit: cover;
   position: fixed;
+  top: 0;
   z-index: -1;
-}
-
-.Logo {
-  width: 100px;
-  min-width: 100px;
 }
 
 .NavBar {
   display: flex;
-  place-content: space-between;
-  padding: 1.5em;
+  place-content: center;
+  justify-content: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, .6);
 }
 
 .NavList {
   list-style: none;
   display: flex;
   place-content: space-between;
+  align-items: center;
+  line-height: 110%;
+  margin: 0.5em 0em;
 }
 
-a {
+.NavList a {
   color: var(--font-color);
-  font-size: 2em;
+  font-size: 18px;
   padding: 0.1em 1em;
   text-decoration: none;
 }
 
-.Hero {
-  display: flex;
-  place-content: center;
-  margin-bottom: 15em;
+.Name{
+  font-weight: bolder;
+  text-align: left;
 }
 
 .CallToAction {
-  font-size: 2em;
+  font-size: 24px;
   text-align: center;
-  margin: 0 1em;
+  margin: 250px 0;
 }
 
 .Separator {
-  background: var(--secondary-color);
-  height: fit-content;
+  background: var(--primary-dark);
   text-align: center;
-  margin: 0;
-}
-
-.Separator h1 {
-  margin: 0;
+  scroll-behavior: smooth;
 }
 
 .Separator p {
-  margin: 0;
-  padding: 1em;
+  padding: 0px 0px 10px 0px;
+  margin: -5px 0 0 0;
+}
+
+.AboutMe{
+  background-color: var(--primary-light);
+  padding: 1.5em;
+  text-align: justify;
+}
+
+.AboutMe h1{
+  text-align: center;
+}
+
+.AboutMe p{
+  padding: 0 25%;
 }
 
 .ProjectPanel {
   text-align: center;
-  background: var(--primary-color);
+  background: var(--primary-base);
   padding: 2em;
   margin: 0;
 }
@@ -96,15 +131,15 @@ a {
 }
 
 .ProjectItem {
-  background: var(--secondary-color);
+  background: var(--primary-dark);
   min-width: 15em;
   max-width: 25em;
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 1em;
-  border-radius: 2em;
-  margin: 0.25em;
+  padding: 0.25em 1em;
+  border-radius: 1em;
+  margin: 1em;
 }
 
 .ProjectItem h2 {
@@ -131,32 +166,25 @@ a {
   flex-wrap: wrap;
   place-content: space-between;
   justify-content: center;
-  padding: 0;
+  padding: 0.25em;
 }
 
 .TagList li {
-  background: var(--secondary-color);
+  background: var(--secondary-base);
+  color: var(--font-primary);
   list-style: none;
   text-align: center;
   padding: 0.05em 0.5em;
-  margin: 0 0.1em;
+  margin: 0 0.25em;
   height: fit-content;
   width: fit-content;
   white-space: nowrap;
   border-radius: 100em;
 }
 
-li .CSharpTag {
-  background: var(--font-primary-color);
-}
-
-li .WebGLTag {
-  background: var(--font-primary-color);
-}
-
 .ResumePanel {
   text-align: center;
-  background: var(--primary-color);
+  background: var(--primary-base);
   padding: 2em;
   margin: 0;
 }
@@ -165,20 +193,12 @@ li .WebGLTag {
   margin: 0;
 }
 
-.PDFFrame {
+.pdf {
   border: none;
-  border-width: 0;
-  width: fit-content;
-  height: fit-content;
+  width: 620px;
+  height: 800px;
   background: none;
 }
 
 @media (max-width: 786px) {
-  .NavList {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    place-content: space-between;
-    margin: 0;
-  }
 }

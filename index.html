@@ -11,27 +11,45 @@
 </head>
 
 <body>
-  <video autoplay muted loop class="BackgroundVideo" src="videos/sample.mp4"></video>
-
   <div class="NavBar">
-    <a class="Logo" href="index.html"><img src="images/logo.svg" alt="Pelican Games Logo"></a>
-
     <ul class="NavList">
-      <li><a href="#ProjectPanel">Projects</a></li>
-      <li><a href="#ResumePanel">Resume</a></li>
+      <li class="Name"><a href="#top">Joshua<br>Pelkington</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="PDFs/JoshuaPelkingtonResume.pdf" target="_blank">Resume</a></li>
     </ul>
   </div>
 
-  <section class="Hero">
-    <div class="CallToAction">
-      <h1>This is the call to action!</h1>
-    </div>
-  </section>
+  <video autoplay muted loop class="BackgroundVideo" src="videos/sample.mp4"></video>
 
-  <div class="Separator">
+  <div class="CallToAction">
+    <h1>&#10013;</h1>
+  </div>
+
+  <div class="AboutMe" id="about">
+    <h1>
+      About Me
+    </h1>
+    <div class="AboutMe">
+      <p>
+        Hello! I'm Joshua Pelkington, a gameplay programmer currently studying Game Design and Production at Drexel
+        University.
+        <br><br>
+        Here are some of my personal and professional projects I have been working on during my 4+ years of Unity
+        development. I love the precision required for programming complex systems, as well as the opportunity to add a
+        creative flair to make wacky games.
+      </p>
+    </div>
+  </div>
+
+
+
+  <div class="Separator" id="projects">
     <h1>
       Projects
     </h1>
+    <p>
+      Click on the covers to learn more about each project!
+    </p>
   </div>
 
 
@@ -39,44 +57,67 @@
 
     <ul class="ProjectGrid">
 
-      <li>
-        <div class="ProjectItem">
-          <h2>
-            Racing Roguelike
-          </h2>
-          <a href="gamepages/racingroguelike.html"><img src="images/Racing Roguelike Cover.png"
-              alt="Racing Roguelike Cover"></a>
+      <li class="ProjectItem">
+        <h2> Racing Roguelike</h2>
+        <a href="gamepages/racingroguelike.html">
+          <img src="images/covers/RacingRoguelikeCover.png" alt="Racing Roguelike Cover"></a>
 
-          <ul class="TagList">
+        <ol class="TagList">
+          <li>Unity</li>
+          <li class="CSharpTag">C#</li>
+          <li class="WebGLTag">WebGL</li>
+          <li>Solo</li>
+        </ol>
 
-            <li class="CSharpTag">
-              C#
-            </li>
+        <p>
+          A simple elevator pitch of the project!
+        </p>
 
-            <li class="WebGLTag">
-              WebGL
-            </li>
+        <ol>
+          <li>
+            <p>This is an acheivement</p>
+          </li>
+          <li>
+            <p>This is an acheivement</p>
+          </li>
+          <li>
+            <p>This is an acheivement</p>
+          </li>
+        </ol>
 
-          </ul>
+      </li>
 
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae voluptates non suscipit beatae perspiciatis,
-            dolore maiores quia explicabo deserunt, enim consequuntur quos quasi optio quae.
-          </p>
-        </div>
+      <li class="ProjectItem">
+        <h2> Desert Darts</h2>
+        <a href="gamepages/desertdarts.html">
+          <img src="images/covers/DesertDartsCover.png" alt="Desert Darts Cover"></a>
+
+        <ol class="TagList">
+          <li>Unity</li>
+          <li class="CSharpTag">C#</li>
+          <li class="Android">Android</li>
+          <li>Solo</li>
+        </ol>
+
+        <p>
+          A simple elevator pitch of the project!
+        </p>
+
+        <ol>
+          <li>
+            <p>This is an acheivement</p>
+          </li>
+          <li>
+            <p>This is an acheivement</p>
+          </li>
+          <li>
+            <p>This is an acheivement</p>
+          </li>
+        </ol>
+
       </li>
 
     </ul>
-  </div>
-
-  <div class="Separator">
-    <h1>
-      Resume
-    </h1>
-  </div>
-
-  <div class="ResumePanel">
-    <iframe class="PDFFrame" src="PDFs/Joshua Pelkington Resume 2021.pdf#toolbar=0">
   </div>
 
 </body>
