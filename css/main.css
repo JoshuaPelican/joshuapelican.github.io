@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Comfortaa:wght@700&display=swap");
 
 :root {
-  --primary-base: #512da8;
-  --primary-dark: #140078;
-  --primary-light: #8558da;
-  --secondary-base: #ffb300;
-  --secondary-dark: #c68400;
+  --primary-base: #743282;
+  --primary-dark: #441C55;
+  --primary-light: #B668A1;
+  --secondary-base: #FFDF00;
+  --secondary-dark: #DC9200;
   --secondary-light: #ffe54c;
   --font-primary: #000000;
   --font-secondary: #ffffff;
@@ -26,7 +26,7 @@
 *{
   scroll-behavior: smooth;
   scrollbar-width: 0;
-  scroll-margin: 3.2em;
+  scroll-margin: 3.41em;
   margin: 0;
 }
 
@@ -39,7 +39,7 @@ body {
   overflow: overlay;
 }
 
-.BackgroundVideo {
+.background-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -48,17 +48,18 @@ body {
   z-index: -1;
 }
 
-.NavBar {
+.nav-bar {
   display: flex;
   place-content: center;
   justify-content: center;
   width: 100%;
+  height: 3.5em;
   position: fixed;
   top: 0;
   background-color: rgba(0, 0, 0, .6);
 }
 
-.NavList {
+.nav-list {
   list-style: none;
   display: flex;
   place-content: space-between;
@@ -67,7 +68,7 @@ body {
   margin: 0.5em 0em;
 }
 
-.NavList a {
+.nav-list a {
   color: var(--font-color);
   font-size: 18px;
   padding: 0.1em 1em;
@@ -79,54 +80,55 @@ body {
   font-size: 1px;
 }
 
-.Name{
+.name{
   font-weight: bolder;
   text-align: left;
 }
 
-.CallToAction {
+.call-to-action {
   font-size: 24px;
   text-align: center;
   margin: 250px 0;
 }
 
-.Separator {
+.about-me{
+  background-color: var(--secondary-dark);
+  padding: 1.5em;
+  text-align: justify;
+}
+
+.about-me h1{
+  text-align: center;
+}
+
+.about-me p{
+  padding: 0 25%;
+}
+
+.separator {
   background: var(--primary-dark);
   text-align: center;
   scroll-behavior: smooth;
 }
 
-.Separator p {
+.separator p {
   padding: 0px 0px 10px 0px;
   margin: -5px 0 0 0;
 }
 
-.AboutMe{
-  background-color: var(--primary-light);
-  padding: 1.5em;
-  text-align: justify;
-}
 
-.AboutMe h1{
-  text-align: center;
-}
-
-.AboutMe p{
-  padding: 0 25%;
-}
-
-.ProjectPanel {
+.project-panel {
   text-align: center;
   background: var(--primary-base);
   padding: 2em;
   margin: 0;
 }
 
-.ProjectPanel h1 {
+.project-panel h1 {
   margin: 0;
 }
 
-.ProjectGrid {
+.project-grid {
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -135,7 +137,7 @@ body {
   padding: 0;
 }
 
-.ProjectItem {
+.project-item {
   background: var(--primary-dark);
   min-width: 15em;
   max-width: 25em;
@@ -147,26 +149,26 @@ body {
   margin: 1em;
 }
 
-.ProjectItem h2 {
+.project-item h2 {
   margin: 0.25em;
 }
 
-.ProjectItem img {
+.project-item img {
   object-fit: cover;
   width: 100%;
 }
 
-.ProjectItem a {
+.project-item a {
   display: inline-flex;
   place-content: center;
   margin: 0.25em;
 }
 
-.ProjectItem p {
+.project-item p {
   margin: 0.25em;
 }
 
-.TagList {
+.tag-list {
   display: flex;
   flex-wrap: wrap;
   place-content: space-between;
@@ -174,7 +176,7 @@ body {
   padding: 0.25em;
 }
 
-.TagList li {
+.tag-list li {
   background: var(--secondary-base);
   color: var(--font-primary);
   list-style: none;
@@ -187,22 +189,27 @@ body {
   border-radius: 100em;
 }
 
-.ResumePanel {
+/*
+**  GAME PAGES
+*/
+
+.nav-spacing{
+  margin-top: 5em;
+}
+
+.title{
   text-align: center;
-  background: var(--primary-base);
-  padding: 2em;
-  margin: 0;
 }
 
-.ResumePanel h1 {
-  margin: 0;
+.categories{
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  margin: 1em 0;
 }
 
-.pdf {
-  border: none;
-  width: 620px;
-  height: 800px;
-  background: none;
+.categories p{
+  margin: 0 10px;
 }
 
 @media (max-width: 786px) {
