@@ -72,6 +72,11 @@ body {
   font-size: 18px;
   padding: 0.1em 1em;
   text-decoration: none;
+  display: flex;
+}
+
+.external-icon{
+  font-size: 1px;
 }
 
 .Name{
