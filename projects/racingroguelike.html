@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Joshua Pelkington - Racing Roguelike</title>
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/github-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </head>
 
 <body>
+    <img class="background-image" src="../images/backgrounds/racing-roguelike-bg-1.JPG" alt="">
+
     <div class="nav-bar">
         <ul class="nav-list">
             <li class="name"><a href="../index.html#top">Joshua<br>Pelkington</a></li>
@@ -25,25 +30,104 @@
 
     <div class="nav-spacing"></div>
 
-    <div class="title">
-        <h1>Project Name</h1>
-        <div class="categories">
+    <div class="info">
+
+        <div class="title">
+            <h1>Racing Roguelike</h1>
+            <div class="categories">
+                <p>
+                    <b>
+                        Project Type<br>
+                        Software Used<br>
+                        Languages<br>
+                        Primary Role(s)<br>
+                        Project Length
+                    </b>
+                </p>
+                <p>
+                    Personal / Solo<br>
+                    Unity<br>
+                    C#<br>
+                    Programmer, Designer<br>
+                    ~1 Week
+                </p>
+            </div>
+        </div>
+
+        <video autoplay muted loop class="gameplay-video" src="../videos/sample.mp4"></video>
+
+        <div class="description">
             <p>
-                <b>
-                    Project Type<br>
-                    Software Used<br>
-                    Languages<br>
-                    Primary Role(s)
-                </b>
-            </p>
-            <p>
-                Project Type<br>
-                Software Used<br>
-                Languages<br>
-                Primary Role(s)
+                Racing Roguelike is a week long project to test my skills at making a complete game. I followed
+                <a href="https://learn.unity.com/project/2d-roguelike-tutorial">an
+                    official unity tutorial</a> and upscale it into a replayable game with a complete gameplay loop.
             </p>
         </div>
+
+        <button class="accordion">
+            <h2>Cool Feature</h2>
+        </button>
+        <div class="accordion-panel">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime accusamus culpa minima dolore non
+                sequi tempore quas nostrum quasi doloribus molestias obcaecati iste, perferendis alias odio ipsum modi
+                omnis.
+            </p>
+
+            <h4>Track Generation</h4>
+            <pre>
+                <code>
+public void SetupScene(int level)
+{
+    BoardSetup();
+    InitializeGrid();
+    LayoutTileAtRandom(wallTiles, wallCount.minimum, wallCount.maximum);
+    LayoutTileAtRandom(pickupTiles, pickupCount.minimum, pickupCount.maximum);
+
+    int obstacleCount = (int)Mathf.Log(level, 2f);
+    LayoutTileAtRandom(obstacleTiles, obstacleCount, obstacleCount);
+
+    Instantiate(victoryTile, new Vector3(columns - 1, rows - 1, 0f), Quaternion.identity);
+
+}
+                </code>
+            </pre>
+        </div>
+
+        <button class="accordion">
+            <h2>Cool Feature</h2>
+        </button>
+        <div class="accordion-panel">
+            <h3></h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ut doloremque voluptate esse,
+                excepturi nulla accusantium, consequuntur numquam nemo veniam voluptatum, repellendus illo sequi
+                voluptas.
+            </p>
+        </div>
+
     </div>
 </body>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            this.classList.toggle("active");
+
+            /* Toggle between hiding and showing the active panel */
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+</script>
 
 </html>

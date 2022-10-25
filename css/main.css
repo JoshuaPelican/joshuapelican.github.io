@@ -9,6 +9,7 @@
   --secondary-light: #ffe54c;
   --font-primary: #000000;
   --font-secondary: #ffffff;
+  --transparent-dark: rgba(0, 0, 0, .6);
 }
 
 ::-webkit-scrollbar{
@@ -56,7 +57,7 @@ body {
   height: 3.5em;
   position: fixed;
   top: 0;
-  background-color: rgba(0, 0, 0, .6);
+  background-color: var(--transparent-dark);
 }
 
 .nav-list {
@@ -197,6 +198,23 @@ body {
   margin-top: 5em;
 }
 
+.info{
+  background-color: var(--transparent-dark);
+  margin: auto;
+  padding: 2em 2em 4em 2em;
+  width: 620px;
+  border-radius: 2.5%;
+}
+
+.background-image{
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 120%;
+}
+
 .title{
   text-align: center;
 }
@@ -212,5 +230,55 @@ body {
   margin: 0 10px;
 }
 
+.description a{
+  text-decoration: none;
+  color: var(--secondary-base);
+}
+
+.gameplay-video{
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  font-family: "Baloo 2";
+  background-color: var(--primary-dark);
+  color: var(--font-secondary);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  margin: 1em 0 0 0;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+}
+
+
+/* Style the accordion panel. Note: hidden by default */
+.accordion-panel {
+  padding: 0 18px;
+  background-color: var(--primary-base);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion:after {
+  content: '\002b'; /* Unicode character for "plus" sign (+) */
+  font-size: 20px;
+  color: var(--font-secondary);
+  float: right;
+}
+
+.active:after {
+  content: "\2212"; /* Unicode character for "minus" sign (-) */
+}
+
 @media (max-width: 786px) {
+
 }
