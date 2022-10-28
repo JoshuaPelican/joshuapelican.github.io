@@ -38,6 +38,7 @@ body {
   padding: 0;
   margin: 0;
   overflow: overlay;
+  overflow-x: hidden;
 }
 
 .background-video {
@@ -66,7 +67,8 @@ body {
   place-content: space-between;
   align-items: center;
   line-height: 110%;
-  margin: 0.5em 0em;
+  margin: 0.5em 0;
+  padding: 0;
 }
 
 .nav-list a {
@@ -202,8 +204,9 @@ body {
   background-color: var(--transparent-dark);
   margin: auto;
   padding: 2em 2em 4em 2em;
-  width: 620px;
-  border-radius: 2.5%;
+  max-width: 620px;
+  min-width: 250px;
+  border-radius: 10px;
 }
 
 .background-image{
@@ -213,6 +216,31 @@ body {
   left: 50%;
   transform: translateX(-50%);
   height: 120%;
+}
+
+.nav-button{
+  font-family: 'Baloo';
+  border: none;
+  border-radius: 10px;
+  margin: 1em;
+  padding: 0.25em 0.5em;
+  text-align: center;
+  background-color: var(--primary-dark);
+  width: fit-content;
+}
+
+.nav-button h3{
+  font-weight: normal;
+}
+
+.nav-button p{
+  font-size: 30px;
+  margin: -12px;
+}
+
+.nav-button a{
+  text-decoration: none;
+  color: var(--font-secondary);
 }
 
 .title{
@@ -238,13 +266,14 @@ body {
 .gameplay-video{
   display: block;
   margin: 0 auto;
+  padding: 1.5em 0;
   width: 90%;
 }
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
   font-family: "Baloo 2";
-  background-color: var(--primary-dark);
+  background-color: var(--primary-base);
   color: var(--font-secondary);
   cursor: pointer;
   display: flex;
@@ -262,10 +291,16 @@ body {
 /* Style the accordion panel. Note: hidden by default */
 .accordion-panel {
   padding: 0 18px;
-  background-color: var(--primary-base);
+  background-color: var(--primary-dark);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+}
+
+.accordion-panel img{
+  display: block;
+  margin: 1.5em auto;
+  width: 90%;
 }
 
 .accordion:after {
@@ -280,5 +315,11 @@ body {
 }
 
 @media (max-width: 786px) {
+  .nav-list a{
+    font-size: 16px;
+  }
 
+  .about-me p{
+    padding: 0;
+  }
 }
