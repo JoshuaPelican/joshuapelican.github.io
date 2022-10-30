@@ -197,16 +197,26 @@ body {
 */
 
 .nav-spacing{
-  margin-top: 5em;
+  margin-top: 3.5em;
 }
 
 .info{
   background-color: var(--transparent-dark);
   margin: auto;
   padding: 2em 2em 4em 2em;
-  max-width: 620px;
+  max-width: 786px;
   min-width: 250px;
   border-radius: 10px;
+  text-align: center;
+}
+
+.info h1{
+  font-size: 64px;
+  line-height: 70px;
+}
+
+.info p{
+  text-align: justify;
 }
 
 .background-image{
@@ -230,17 +240,18 @@ body {
   margin: 1em;
   padding: 0.25em 0.5em;
   text-align: center;
-  background-color: var(--secondary-dark);
-  width: fit-content;
+  background-color: var(--primary-dark);
+  width: 8em;
 }
 
 .nav-button h3{
+  font-size: medium;
   font-weight: normal;
 }
 
 .nav-button p{
-  font-size: 30px;
-  margin: -12px;
+  font-size: 25px;
+  margin: -14px 0 -12px 0;
 }
 
 .nav-button a{
@@ -266,6 +277,16 @@ body {
 .description a{
   text-decoration: none;
   color: var(--secondary-base);
+}
+
+.links{
+  display: flex;
+  justify-content: center;
+}
+
+.links img{
+  width: 1.5em;
+  margin: 0 1em;
 }
 
 .gameplay-video{
