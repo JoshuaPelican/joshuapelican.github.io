@@ -80,7 +80,7 @@ body {
 }
 
 .external-icon{
-  font-size: 1px;
+  font-size: 10px;
 }
 
 .name{
@@ -218,6 +218,11 @@ body {
   height: 120%;
 }
 
+.nav-buttons{
+  display: flex;
+  justify-content: space-between;
+}
+
 .nav-button{
   font-family: 'Baloo';
   border: none;
@@ -225,7 +230,7 @@ body {
   margin: 1em;
   padding: 0.25em 0.5em;
   text-align: center;
-  background-color: var(--primary-dark);
+  background-color: var(--secondary-dark);
   width: fit-content;
 }
 
@@ -319,7 +324,16 @@ body {
     font-size: 16px;
   }
 
+  .external-icon{
+    font-size: 8px;
+  }
+
   .about-me p{
     padding: 0;
   }
+
+  .info{
+    padding: 1em;
+  }
+
 }

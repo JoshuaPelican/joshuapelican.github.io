@@ -5,11 +5,160 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Desert Darts</title>
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/github-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </head>
 
 <body>
+    <img class="background-image" src="../images/backgrounds/desert-darts-bg-1.png" alt="">
+
+    <div class="nav-bar">
+        <ul class="nav-list">
+            <li class="name"><a href="../index.html#top">Joshua<br>Pelkington</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="joshuapelkingtonresume.pdf" target="_blank">
+                    Resume
+                    <p class="external-icon">&#10697;</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="nav-spacing"></div>
+
+
+    <div class="nav-buttons">
+        <div class="nav-button">
+            <a href="../projects/droppingundead.html">
+                <h3>Dropping Undead</h3>
+                <p>&#8592;</p>
+            </a>
+        </div>
+
+        <div class="nav-button">
+            <a href="../projects/droppingundead.html">
+                <h3>Dropping Undead</h3>
+                <p>&#8594;</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="info">
+
+        <div class="title">
+            <h1>Desert Darts</h1>
+            <div class="categories">
+                <p>
+                    <b>
+                        Project Type<br>
+                        Software Used<br>
+                        Languages<br>
+                        Primary Role(s)<br>
+                        Project Length
+                    </b>
+                </p>
+                <p>
+                    College / Solo<br>
+                    Unity<br>
+                    C#<br>
+                    Programmer, Artist, Developer<br>
+                    ~10 Weeks
+                </p>
+            </div>
+        </div>
+
+        <video autoplay muted loop class="gameplay-video" src="../videos/desert-darts-demo.mp4"></video>
+
+        <div class="description">
+            <p>
+                Desert Darts is an endless android game inspired by a fervent desire to completely develop a mobile
+                experience. Using the devices gyroscopic infromation, the player controls a target with the goal of
+                landing precice hits in succession. The adaptive difficulty and complex dart pattern generation keeps
+                this endless experience engaging.
+            </p>
+        </div>
+
+        <button class="accordion">
+            <h2>Mobile Development</h2>
+        </button>
+        <div class="accordion-panel">
+            <p>
+                <br>
+                From the inital conception of this project I wanted to develop a mobile game. Every decision made came
+                from this mindset.
+            </p>
+            <img src="../images/examples/dropping-undead-1.jpg" alt="">
+            <p>
+                The color gradients from green to red communicate important gameplay
+                information without the need for a HUD. Guns, for example, are bright green when full and ref when out
+                of ammo. Enemies and the player change from green/yellow to red as their health runs out.
+            </p>
+            <img src="../images/examples/dropping-undead-2.jpg" alt="">
+            <p>
+                I needed some way to give the 3D environment a sense of depth without proper lighting. I discovered that
+                the Unity fog system still interacts with unlit shaders! I tweaked it to work with my shader setup and
+                matched it witht eh pallete so the environment slowlsy fades into the background and the subtle shapes
+                of the geometry stands out.
+                <br><br>
+            </p>
+        </div>
+
+        <button class="accordion">
+            <h2>Adaptive Difficulty</h2>
+        </button>
+        <div class="accordion-panel">
+            <h3></h3>
+            <p>
+                <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ut doloremque voluptate esse,
+                excepturi nulla accusantium, consequuntur numquam nemo veniam voluptatum, repellendus illo sequi
+                voluptas.
+            </p>
+
+            <img src="" alt="">
+        </div>
+
+        <button class="accordion">
+            <h2>Dart Pattern Generation</h2>
+        </button>
+        <div class="accordion-panel">
+            <h3></h3>
+            <p>
+                <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ut doloremque voluptate esse,
+                excepturi nulla accusantium, consequuntur numquam nemo veniam voluptatum, repellendus illo sequi
+                voluptas.
+            </p>
+
+            <img src="" alt="">
+        </div>
+
+    </div>
 </body>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            this.classList.toggle("active");
+
+            /* Toggle between hiding and showing the active panel */
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+</script>
 
 </html>
