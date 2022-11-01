@@ -218,6 +218,10 @@ body {
   text-align: justify;
 }
 
+.info pre{
+  text-align: start;
+}
+
 .background-image{
   position: fixed;
   z-index: -1;
@@ -230,6 +234,8 @@ body {
 .nav-buttons{
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 3.5em;
 }
 
 .nav-button{
@@ -348,12 +354,23 @@ body {
     font-size: 8px;
   }
 
+  .background-video{
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    top: -8vh;
+  }
+
   .about-me p{
     padding: 0;
+  }
+
+  .nav-buttons{
+    position: unset;
   }
 
   .info{
     padding: 1em;
   }
-
+  
 }

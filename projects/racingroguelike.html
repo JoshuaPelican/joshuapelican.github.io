@@ -128,7 +128,6 @@ public void SetupScene(int level)
             </pre>
         </div>
 
-        -->
 
         <button class="accordion">
             <h2>Steering + Tire Tracks</h2>
@@ -136,11 +135,24 @@ public void SetupScene(int level)
         <div class="accordion-panel">
             <h3></h3>
             <p>
-
+                <br>
+                When designing the driving functionality, I wanted to 
             </p>
+            <pre>
+                <code>
+private void ApplyTireDirectionRestrictions()
+{
+    Vector3 modifiedVelocity = localVelocity;
+
+    modifiedVelocity.x /= 2;
+
+    rig.velocity = transform.TransformDirection(modifiedVelocity);
+}
+                </code>
+            </pre>
         </div>
 
-
+        -->
 
     </div>
 </body>

@@ -71,7 +71,7 @@
             </div>
 
             <div class="links">
-                <a href="https://github.com/JoshuaPelican/Desert-Darts-Mobile-Game" target="_blank"><img
+                <a href="https://github.com/JoshuaPelican/GMTK-Game-Jam-2021" target="_blank"><img
                         src="../images/icons/github.svg" alt="Github Icon"></a>
                 <a href="https://joshuapelican.itch.io/krafts" target="_blank"><img src="../images/icons/play-game.svg"
                         alt="Gamepad Icon"></a>
@@ -89,8 +89,8 @@
 
                 Players can arrange many different objects, glue
                 them together, and even draw on them! After they finish they can shake off any un-glued objects and save
-                a screenshot of their creation to their device. During the jam I angaged with the community by
-                collecting they screenshots and putting them on the main game page!
+                a screenshot of their creation to their device. During the jam I engaged with the community by
+                collecting their screenshots and putting them on the main game page!
             </p>
         </div>
 
@@ -100,12 +100,59 @@
         <div class="accordion-panel">
             <p>
                 <br>
+                A huge issue I ran into right away was making sure the sprites were being layered as someone would
+                expect them to be. If a player grabs an object it should be on top of everthing else, and any new
+                objects would be on top of that. My quick and dirty solution for the game jam was to use the Z-axis to
+                layer the sprites.
             </p>
+            <pre>
+                <code>
+public class ToolManager : MonoBehaviour
+{
+    public float currentZ = 0;
+    
+    public void NextZ()
+    {
+        currentZ -= .01f;
+    }
+}
+                </code>
+            </pre>
             <p>
-                <br><br>
+                In a manager script, I kept track of a global Z value, and decremented it (brought it closer to the
+                camera) every time I needed to move an object to the front. This value then keeps track of the Z value
+                to make the next highest object.
+            </p>
+            <video autoplay muted loop class="gameplay-video" src="../videos/snippets/krafts-layering.mp4"></video>
+            <pre>
+                <code>
+{
+    if (ToolManager.instance.SelectedTool == ToolManager.Tool.Manipulate)
+    {
+        ToolManager.instance.NextZ();
+        SetActive(true);
+    }
+}
+    
+if (active)
+{
+    transform.position = new Vector3(InputUtility.MousePosition.x, InputUtility.MousePosition.y, ToolManager.instance.currentZ);
+}
+                </code>
+            </pre>
+            <p>
+                When I grab an object, I can now set the object's Z coordinate to be this value, and bring it to the
+                front immediately.
+                <br> <br>
+                If I was to redo this system, given more time, I would like to keep a similar Z coordinate system, but
+                clean it up. There were alot of issues related to local vs world space coordinates. Sometimes grabbing
+                an object would not bring it to the front because previously glued objects had stacked Z values and
+                surpassed the current global Z value.
+                <br> <br>
             </p>
         </div>
 
+        <!--
         <button class="accordion">
             <h2>Screenshot Functionality</h2>
         </button>
@@ -117,6 +164,7 @@
                 <br><br>
             </p>
         </div>
+        -->
 
     </div>
 </body>
