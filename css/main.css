@@ -112,11 +112,16 @@ body {
   background: var(--primary-dark);
   text-align: center;
   scroll-behavior: smooth;
+  padding: 0px 0px 10px 0px;
 }
 
 .separator p {
-  padding: 0px 0px 10px 0px;
   margin: -5px 0 0 0;
+}
+
+.separator a {
+  margin: -5px 0 0 0;
+  color: var(--secondary-base);
 }
 
 
