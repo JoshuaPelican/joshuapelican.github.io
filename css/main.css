@@ -33,7 +33,7 @@
 
 body {
   font-family: "Baloo 2";
-  background: var(--primary-base);
+  background: var(--primary-dark);
   color: var(--font-secondary);
   padding: 0;
   margin: 0;
@@ -43,10 +43,10 @@ body {
 
 .background-video {
   width: 100%;
-  height: 120%;
+  height: 100%;
   object-fit: cover;
   position: fixed;
-  top: -27.5%;
+  top: 0%;
   z-index: -1;
 }
 
@@ -95,7 +95,7 @@ body {
 }
 
 .about-me{
-  background-color: var(--secondary-dark);
+  background-color: var(--transparent-dark);
   padding: 1.5em;
   text-align: justify;
 }
@@ -109,7 +109,7 @@ body {
 }
 
 .separator {
-  background: var(--primary-dark);
+  background: var(--primary-base);
   text-align: center;
   scroll-behavior: smooth;
   padding: 0px 0px 10px 0px;
@@ -127,7 +127,7 @@ body {
 
 .project-panel {
   text-align: center;
-  background: var(--primary-base);
+  background: var(--primary-dark);
   padding: 2em;
   margin: 0;
 }
@@ -146,7 +146,7 @@ body {
 }
 
 .project-item {
-  background: var(--primary-dark);
+  background: var(--secondary-dark);
   min-width: 15em;
   max-width: 25em;
   display: flex;
@@ -185,8 +185,8 @@ body {
 }
 
 .tag-list li {
-  background: var(--secondary-base);
-  color: var(--font-primary);
+  background: var(--primary-base);
+  color: var(--font-secondary);
   list-style: none;
   text-align: center;
   padding: 0.05em 0.5em;
@@ -251,8 +251,9 @@ body {
   margin: 1em;
   padding: 0.25em 0.5em;
   text-align: center;
-  background-color: var(--primary-dark);
-  width: 8em;
+  background-color: var(--primary-base);
+  min-width: 8em;
+  max-width: 10em;
 }
 
 .nav-button h3{
@@ -364,7 +365,7 @@ body {
     height: 100%;
     object-fit: cover;
     position: fixed;
-    top: -8vh;
+    top: 0%;
   }
 
   .about-me p{
