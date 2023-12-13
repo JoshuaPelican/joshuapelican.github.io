@@ -9,368 +9,135 @@
   --secondary-light: #ffe54c;
   --font-primary: #000000;
   --font-secondary: #ffffff;
+  --transparent: rgba(0, 0, 0, 0);
   --transparent-dark: rgba(0, 0, 0, .6);
 }
 
-::-webkit-scrollbar{
-  width: 10px;
-}
-
-::-webkit-scrollbar-track{
-  background: rgba(0, 0, 0, 0);
-}
-
-::-webkit-scrollbar-thumb{
-  background: rgba(0, 0, 0, .25);
-}
-
 *{
-  scroll-behavior: smooth;
-  scrollbar-width: 0;
-  scroll-margin: 3.41em;
-  margin: 0;
+  box-sizing: border-box;
 }
 
-body {
-  font-family: "Baloo 2";
-  background: var(--primary-dark);
-  color: var(--font-secondary);
-  padding: 0;
-  margin: 0;
-  overflow: overlay;
-  overflow-x: hidden;
-}
+body{
+  height: 100vh;
+  margin: 0px;
 
-.background-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: fixed;
-  top: 0%;
-  z-index: -1;
-}
-
-.nav-bar {
-  display: flex;
-  place-content: center;
-  justify-content: center;
-  width: 100%;
-  height: 3.5em;
-  position: fixed;
-  top: 0;
-  background-color: var(--transparent-dark);
-}
-
-.nav-list {
-  list-style: none;
-  display: flex;
-  place-content: space-between;
-  align-items: center;
-  line-height: 110%;
-  margin: 0.5em 0;
-  padding: 0;
-}
-
-.nav-list a {
-  color: var(--font-color);
-  font-size: 18px;
-  padding: 0.1em 1em;
-  text-decoration: none;
-  display: flex;
-}
-
-.external-icon{
-  font-size: 10px;
-}
-
-.name{
-  font-weight: bolder;
-  text-align: left;
-}
-
-.call-to-action {
-  font-size: 24px;
-  text-align: center;
-  margin: 39.5vh 0;
-}
-
-.about-me{
-  background-color: var(--transparent-dark);
-  padding: 1.5em;
-  text-align: justify;
-}
-
-.about-me h1{
-  text-align: center;
-}
-
-.about-me p{
-  padding: 0 25%;
-}
-
-.separator {
-  background: var(--primary-base);
-  text-align: center;
-  scroll-behavior: smooth;
-  padding: 0px 0px 10px 0px;
-}
-
-.separator p {
-  margin: -5px 0 0 0;
-}
-
-.separator a {
-  margin: -5px 0 0 0;
-  color: var(--secondary-base);
-}
-
-
-.project-panel {
-  text-align: center;
-  background: var(--primary-dark);
-  padding: 2em;
-  margin: 0;
-}
-
-.project-panel h1 {
-  margin: 0;
-}
-
-.project-grid {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  place-content: center;
-  padding: 0;
-}
-
-.project-item {
-  background: var(--secondary-dark);
-  min-width: 15em;
-  max-width: 25em;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  padding: 0.25em 1em;
-  border-radius: 1em;
-  margin: 1em;
 }
 
-.project-item h2 {
-  margin: 0.25em;
-}
-
-.project-item img {
-  object-fit: cover;
+main{
   width: 100%;
+  height: calc(100vh - 64px);
+
+  background-color: var(--primary-base);
 }
 
-.project-item a {
-  display: inline-flex;
-  place-content: center;
-  margin: 0.25em;
-}
+main > article{
+  height: 100%;
 
-.project-item p {
-  margin: 0.25em;
-}
-
-.tag-list {
   display: flex;
-  flex-wrap: wrap;
-  place-content: space-between;
+  flex-direction: row;
   justify-content: center;
-  padding: 0.25em;
 }
 
-.tag-list li {
-  background: var(--primary-base);
-  color: var(--font-secondary);
-  list-style: none;
-  text-align: center;
-  padding: 0.05em 0.5em;
-  margin: 0 0.25em;
-  height: fit-content;
-  width: fit-content;
-  white-space: nowrap;
-  border-radius: 100em;
+main > article > .article-section{
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#article-nav-left{
+  width: 5%;
+  position: absolute;
+  left: 0;
+
+  background-color: var(--primary-dark);
+}
+
+#article-nav-right{
+  width: 5%;
+  position: absolute;
+  right: 0;
+
+  background-color: var(--primary-dark);
+}
+
+#article-img-section{
+  width: 55%;
+}
+
+#article-img-section > img{
+  width: 100%;
+  padding: 2em;
+}
+
+#article-content-section{
+  width: 35%;
+
+  background-color: var(--primary-light);
+}
+
+#article-content-section > .content-section{
+  padding: 0em 1em;
+
+  overflow: auto;
+}
+
+#article-content-section > #content-accomplishments{
+  font-weight: bold;
+}
+
+#article-content-section > #content-links{
+  display: flex;
+  flex-direction: row;
+}
+
+#article-content-section > #content-links a{
+  padding: 2em 1em;
 }
 
 /*
-**  GAME PAGES
+// NAV BAR
 */
 
-.nav-spacing{
-  margin-top: 5em;
+nav{
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+  white-space: nowrap;
+
+  border-top: 1px solid var(--font-primary);
 }
 
-.info{
+nav > .nav-item{
+  height: 64px;
+  width: 64px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid var(--font-primary);
+  text-decoration: none;
+}
+
+nav::-webkit-scrollbar{
+  width: 8px;
+  height: 5px;
+  background-color: var(--transparent);
+}
+nav::-webkit-scrollbar-thumb{
   background-color: var(--transparent-dark);
-  margin: auto;
-  padding: 2em 2em 4em 2em;
-  max-width: 786px;
-  min-width: 250px;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.info h1{
-  font-size: 64px;
-  line-height: 70px;
-}
-
-.info p{
-  text-align: justify;
-}
-
-.info pre{
-  text-align: start;
-}
-
-.background-image{
-  position: fixed;
-  z-index: -1;
-  top: -10%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-}
-
-.nav-buttons{
-  display: flex;
-  justify-content: space-between;
-}
-
-.nav-buttons a{
-  text-decoration: none;
-  color: var(--font-secondary);
-}
-
-.nav-button{
-  font-family: 'Baloo';
-  border: none;
-  border-radius: 10px;
-  margin: 0;
-  padding: 1em;
-  text-align: center;
-  background-color: var(--secondary-dark);
-  width: 1em;
-  height: 1em;
-}
-
-.nav-button p{
-  font-size: 48px;
-  margin: -.575em 0 0 -0.2em;
-}
-
-.title{
-  text-align: center;
-}
-
-.categories{
-  display: flex;
-  text-align: left;
-  justify-content: center;
-  margin: 1em 0;
-}
-
-.categories p{
-  margin: 0 10px;
-}
-
-.description a{
-  text-decoration: none;
-  color: var(--secondary-base);
-}
-
-.links{
-  display: flex;
-  justify-content: center;
-}
-
-.links img{
-  width: 2.5em;
-  margin: 0 1em;
-}
-
-.gameplay-video{
-  display: block;
-  margin: 0 auto;
-  padding: 1.5em 0;
-  width: 90%;
-}
-
-/* Style the buttons that are used to open and close the accordion panel */
-.accordion {
-  font-family: "Baloo 2";
-  background-color: var(--primary-base);
-  color: var(--font-secondary);
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  padding: 1em;
-  margin: 1em 0 0 0;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.3s;
 }
 
 
-/* Style the accordion panel. Note: hidden by default */
-.accordion-panel {
-  padding: 0 18px;
-  background-color: var(--primary-dark);
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
+@media only screen and (max-width: 768px) {
 
-.accordion-panel img{
-  display: block;
-  margin: 1.5em auto;
-  width: 90%;
-}
-
-.accordion:after {
-  content: '\002b'; /* Unicode character for "plus" sign (+) */
-  font-size: 20px;
-  color: var(--font-secondary);
-  float: right;
-}
-
-.active:after {
-  content: "\2212"; /* Unicode character for "minus" sign (-) */
-}
-
-@media (max-width: 786px) {
-  .nav-list a{
-    font-size: 16px;
-  }
-
-  .external-icon{
-    font-size: 8px;
-  }
-
-  .background-video{
-    height: 100%;
-    object-fit: cover;
-    position: fixed;
-    top: 0%;
-  }
-
-  .about-me p{
-    padding: 0;
-  }
-
-  .nav-buttons{
-    position: unset;
-  }
-
-  .info{
-    padding: 1em;
-  }
-  
 }
