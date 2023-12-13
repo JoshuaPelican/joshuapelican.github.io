@@ -9,17 +9,23 @@
   <title>Joshua Pelkington - Gameplay Programmer</title>
   <link rel="stylesheet" href="css/main.css">
   <script src="https://kit.fontawesome.com/2b13c75616.js" crossorigin="anonymous"></script>
+  <script src="js/nav.js"></script>
 </head>
 
 <body>
 
   <main>
-    <article>
-      <button id="article-nav-left" class="article-section">
-        <i class="fa-solid fa-hippo"></i>
-      </button>
+
+    <button id="article-nav-left" class="article-section" type="button" onclick="handleClickLeft()">
+      <i class="fa-solid fa-hippo"></i>
+    </button>
+    <button id="article-nav-right" class="article-section" type="button" onclick="handleClickRight()">
+      <i class="fa-solid fa-hippo"></i>
+    </button>
+
+    <article class="article" data-index="0" data-status="active">
       <div id="article-img-section" class="article-section">
-        <img src="images/covers/desert-darts-cover.png" alt="">
+        <img src="https://picsum.photos/seed/-10/1024/768" alt="">
       </div>
       <div id="article-content-section" class="article-section">
         <div id="content-title" class="content-section">
@@ -30,7 +36,7 @@
             tempore
             sequi saepe vero. Voluptas ullam laborum eum iure, quaerat libero sit, voluptate natus vero, eos nisi!
             Beatae voluptates id nihil autem sint quo, molestiae maxime? Doloribus totam itaque officiis ea! Optio,
-            saepe ab? Vitae, minima?</p>
+            saepe ab? Vitae, minima? 0</p>
         </div>
         <div id="content-accomplishments" class="content-section">
           <li>Lorem</li>
@@ -51,39 +57,106 @@
           </a>
         </div>
       </div>
-      <button id="article-nav-right" class="article-section">
-        <i class="fa-solid fa-hippo"></i>
-      </button>
+    </article>
+    <article class="article" data-index="1" data-status="inactive">
+      <div id="article-img-section" class="article-section">
+        <img src="https://picsum.photos/seed/-11/1024/768" alt="">
+      </div>
+      <div id="article-content-section" class="article-section">
+        <div id="content-title" class="content-section">
+          <h2>Lorem, ipsum.</h2>
+        </div>
+        <div id="content-description" class="content-section">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, eius laborum praesentium odio porro
+            tempore
+            sequi saepe vero. Voluptas ullam laborum eum iure, quaerat libero sit, voluptate natus vero, eos nisi!
+            Beatae voluptates id nihil autem sint quo, molestiae maxime? Doloribus totam itaque officiis ea! Optio,
+            saepe ab? Vitae, minima? 1</p>
+        </div>
+        <div id="content-accomplishments" class="content-section">
+          <li>Lorem</li>
+          <li>Lorem</li>
+          <li>Lorem</li>
+          <li>Lorem</li>
+          <li>Lorem</li>
+        </div>
+        <div id="content-links" class="content-section">
+          <a href="#">
+            <i class="fa-solid fa-hippo"></i>
+          </a>
+          <a href="#">
+            <i class="fa-solid fa-hippo"></i>
+          </a>
+          <a href="#">
+            <i class="fa-solid fa-hippo"></i>
+          </a>
+        </div>
+      </div>
+    </article>
+    <article class="article" data-index="2" data-status="inactive">
+      <div id="article-img-section" class="article-section">
+        <img src="https://picsum.photos/seed/-12/1024/768" alt="">
+      </div>
+      <div id="article-content-section" class="article-section">
+        <div id="content-title" class="content-section">
+          <h2>Lorem, ipsum.</h2>
+        </div>
+        <div id="content-description" class="content-section">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, eius laborum praesentium odio porro
+            tempore
+            sequi saepe vero. Voluptas ullam laborum eum iure, quaerat libero sit, voluptate natus vero, eos nisi!
+            Beatae voluptates id nihil autem sint quo, molestiae maxime? Doloribus totam itaque officiis ea! Optio,
+            saepe ab? Vitae, minima? 2</p>
+        </div>
+        <div id="content-accomplishments" class="content-section">
+          <li>Lorem</li>
+          <li>Lorem</li>
+          <li>Lorem</li>
+          <li>Lorem</li>
+          <li>Lorem</li>
+        </div>
+        <div id="content-links" class="content-section">
+          <a href="#">
+            <i class="fa-solid fa-hippo"></i>
+          </a>
+          <a href="#">
+            <i class="fa-solid fa-hippo"></i>
+          </a>
+          <a href="#">
+            <i class="fa-solid fa-hippo"></i>
+          </a>
+        </div>
+      </div>
     </article>
   </main>
 
   <nav>
     <a href="" id="nav-" class="nav-item">
-      <i class="fa-solid fa-hippo"></i>
+      <img src="https://picsum.photos/seed/-1/200/200" alt="">
     </a>
     <a href="" id="nav-" class="nav-item">
-      <i class="fa-solid fa-hippo"></i>
+      <img src="https://picsum.photos/seed/1/200/200" alt="">
     </a>
     <a href="" id="nav-" class="nav-item">
-      <i class="fa-solid fa-hippo"></i>
+      <img src="https://picsum.photos/seed/2/200/200" alt="">
     </a>
     <a href="" id="nav-" class="nav-item">
-      <i class="fa-solid fa-hippo"></i>
+      <img src="https://picsum.photos/seed/3/200/200" alt="">
     </a>
     <a href="" id="nav-" class="nav-item">
-      <i class="fa-solid fa-hippo"></i>
+      <img src="https://picsum.photos/seed/4/200/200" alt="">
     </a>
     <a href="" id="nav-" class="nav-item">
-      <i class="fa-solid fa-hippo"></i>
+      <img src="https://picsum.photos/seed/5/200/200" alt="">
     </a>
     <a href="" id="nav-" class="nav-item">
-      <i class="fa-solid fa-hippo"></i>
+      <img src="https://picsum.photos/seed/6/200/200" alt="">
     </a>
     <a href="" id="nav-" class="nav-item">
-      <i class="fa-solid fa-hippo"></i>
+      <img src="https://picsum.photos/seed/7/200/200" alt="">
     </a>
     <a href="" id="nav-" class="nav-item">
-      <i class="fa-solid fa-hippo"></i>
+      <img src="https://picsum.photos/seed/8/200/200" alt="">
     </a>
   </nav>
 
