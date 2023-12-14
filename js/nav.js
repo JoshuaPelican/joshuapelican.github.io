@@ -19,10 +19,12 @@ const handleClickDirect = (i) => {
         nextArticle = document.querySelector('[data-index="'+nextIndex+'"]');
     
         currentArticle.dataset.status = "before";
+        document.querySelectorAll('[data-index="'+activeIndex+'"]')[1].dataset.status = "inactive";
         nextArticle.dataset.status = "becoming-active-from-before"
         
         setTimeout(() =>{
             nextArticle.dataset.status = "active";
+            document.querySelectorAll('[data-index="'+nextIndex+'"]')[1].dataset.status = "active";
             activeIndex = nextIndex;
         });
     }
@@ -31,10 +33,12 @@ const handleClickDirect = (i) => {
         nextArticle = document.querySelector('[data-index="'+nextIndex+'"]');
         
         currentArticle.dataset.status = "after";
+        document.querySelectorAll('[data-index="'+activeIndex+'"]')[1].dataset.status = "inactive";
         nextArticle.dataset.status = "becoming-active-from-after";
         
         setTimeout(() =>{
             nextArticle.dataset.status = "active";
+            document.querySelectorAll('[data-index="'+nextIndex+'"]')[1].dataset.status = "active";
             activeIndex = nextIndex;
         });
     }
@@ -49,10 +53,12 @@ const handleClickLeft = () =>{
     nextArticle = document.querySelector('[data-index="'+nextIndex+'"]');
 
     currentArticle.dataset.status = "after";
+    document.querySelectorAll('[data-index="'+activeIndex+'"]')[1].dataset.status = "inactive";
     nextArticle.dataset.status = "becoming-active-from-after";
     
     setTimeout(() =>{
         nextArticle.dataset.status = "active";
+        document.querySelectorAll('[data-index="'+nextIndex+'"]')[1].dataset.status = "active";
         activeIndex = nextIndex;
     });
 }
@@ -64,10 +70,12 @@ const handleClickRight = () =>{
     nextArticle = document.querySelector('[data-index="'+nextIndex+'"]');
 
     currentArticle.dataset.status = "before";
+    document.querySelectorAll('[data-index="'+activeIndex+'"]')[1].dataset.status = "inactive";
     nextArticle.dataset.status = "becoming-active-from-before";
     
     setTimeout(() =>{
         nextArticle.dataset.status = "active";
+        document.querySelectorAll('[data-index="'+nextIndex+'"]')[1].dataset.status = "active";
         activeIndex = nextIndex;
     });
 }

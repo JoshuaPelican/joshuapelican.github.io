@@ -13,19 +13,16 @@
 </head>
 
 <body>
-
+  <button id="article-nav-left" class="article-section" type="button" onclick="handleClickLeft()">
+    <i class="fa-solid fa-hippo"></i>
+  </button>
+  <button id="article-nav-right" class="article-section" type="button" onclick="handleClickRight()">
+    <i class="fa-solid fa-hippo"></i>
+  </button>
   <main>
-
-    <button id="article-nav-left" class="article-section" type="button" onclick="handleClickLeft()">
-      <i class="fa-solid fa-hippo"></i>
-    </button>
-    <button id="article-nav-right" class="article-section" type="button" onclick="handleClickRight()">
-      <i class="fa-solid fa-hippo"></i>
-    </button>
-
     <article class="article" data-index="0" data-status="inactive">
       <div id="article-img-section" class="article-section">
-        <img src="https://picsum.photos/seed/-1/1024/768" alt="">
+        <img src="https://picsum.photos/seed/-1/1920/1080" alt="">
       </div>
       <div id="article-content-section" class="article-section">
         <div id="content-title" class="content-section">
@@ -60,7 +57,7 @@
     </article>
     <article class="article" data-index="1" data-status="active">
       <div id="article-img-section" class="article-section">
-        <img src="https://picsum.photos/seed/1/1024/768" alt="">
+        <img src="https://picsum.photos/seed/1/1920/1080" alt="">
       </div>
       <div id="article-content-section" class="article-section">
         <div id="content-title" class="content-section">
@@ -95,7 +92,7 @@
     </article>
     <article class="article" data-index="2" data-status="inactive">
       <div id="article-img-section" class="article-section">
-        <img src="https://picsum.photos/seed/2/1024/768" alt="">
+        <img src="https://picsum.photos/seed/2/1920/1080" alt="">
       </div>
       <div id="article-content-section" class="article-section">
         <div id="content-title" class="content-section">
@@ -130,7 +127,7 @@
     </article>
     <article class="article" data-index="3" data-status="inactive">
       <div id="article-img-section" class="article-section">
-        <img src="https://picsum.photos/seed/3/1024/768" alt="">
+        <img src="https://picsum.photos/seed/3/1920/1080" alt="">
       </div>
       <div id="article-content-section" class="article-section">
         <div id="content-title" class="content-section">
@@ -165,7 +162,7 @@
     </article>
     <article class="article" data-index="4" data-status="inactive">
       <div id="article-img-section" class="article-section">
-        <img src="https://picsum.photos/seed/4/1024/768" alt="">
+        <img src="https://picsum.photos/seed/4/1920/1080" alt="">
       </div>
       <div id="article-content-section" class="article-section">
         <div id="content-title" class="content-section">
@@ -200,7 +197,7 @@
     </article>
     <article class="article" data-index="5" data-status="inactive">
       <div id="article-img-section" class="article-section">
-        <img src="https://picsum.photos/seed/5/1024/768" alt="">
+        <img src="https://picsum.photos/seed/5/1920/1080" alt="">
       </div>
       <div id="article-content-section" class="article-section">
         <div id="content-title" class="content-section">
@@ -236,22 +233,23 @@
   </main>
 
   <nav>
-    <button href="" id="nav-" class="nav-item" type="button" onclick="handleClickDirect(0)">
+    <button href="" id="nav-" class="nav-item" type="button" onclick="handleClickDirect(0)" data-index="0">
       <img src="https://picsum.photos/seed/-1/200/200" alt="">
     </button>
-    <button href="" id="nav-" class="nav-item" type="button" onclick="handleClickDirect(1)">
+    <button href="" id="nav-" class="nav-item" type="button" onclick="handleClickDirect(1)" data-index="1"
+      data-status="active">
       <img src="https://picsum.photos/seed/1/200/200" alt="">
     </button>
-    <button href="" id="nav-" class="nav-item" type="button" onclick="handleClickDirect(2)">
+    <button href="" id="nav-" class="nav-item" type="button" onclick="handleClickDirect(2)" data-index="2">
       <img src="https://picsum.photos/seed/2/200/200" alt="">
     </button>
-    <button href="" id="nav-" class="nav-item" type="button" onclick="handleClickDirect(3)">
+    <button href="" id="nav-" class="nav-item" type="button" onclick="handleClickDirect(3)" data-index="3">
       <img src="https://picsum.photos/seed/3/200/200" alt="">
     </button>
-    <button href="" id="nav-" class="nav-item" type="button" onclick="handleClickDirect(4)">
+    <button href="" id="nav-" class="nav-item" type="button" onclick="handleClickDirect(4)" data-index="4">
       <img src="https://picsum.photos/seed/4/200/200" alt="">
     </button>
-    <button href="" id="nav-" class="nav-item" type="button" onclick="handleClickDirect(5)">
+    <button href="" id="nav-" class="nav-item" type="button" onclick="handleClickDirect(5)" data-index="5">
       <img src="https://picsum.photos/seed/5/200/200" alt="">
     </button>
   </nav>
