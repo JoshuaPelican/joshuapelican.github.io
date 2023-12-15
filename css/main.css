@@ -1,13 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Comfortaa:wght@700&display=swap");
 
 :root {
-  --primary: #F8C854;
-  --secondary: #661B71;
+  --link-color: #F8C854;
+  --other: #661B71;
   --transparent: rgba(0, 0, 0, 0);
 }
 
 *{
   /*box-sizing: border-box;*/
+}
+
+a > *{
+  color: var(--link-color);
 }
 
 body{
@@ -134,7 +138,7 @@ main > article[data-status="after"]{
 
 #article-content-section > #content-links a{
   font-size: xx-large;
-  padding: 1em 1em;
+  padding: 0.5em;
   color: inherit;
 }
 
