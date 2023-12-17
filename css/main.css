@@ -1,13 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Comfortaa:wght@700&display=swap");
-
 :root {
   --link-color: #F8C854;
   --other: #661B71;
-  --transparent: rgba(0, 0, 0, 0);
+  --transparent-partial: rgba(0, 0, 0, .25)
 }
 
 *{
-  /*box-sizing: border-box;*/
+  box-sizing: border-box;
+  font-family: "Outfit";
 }
 
 a > *{
@@ -23,6 +22,15 @@ body{
   overflow: hidden;
 }
 
+body > .background{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  object-fit: cover;
+
+  opacity: 0.1;
+}
+
 body > button{
   height: 100%;
   width: 5%;
@@ -31,29 +39,42 @@ body > button{
   position: absolute;
   z-index: 1;
 
+  justify-content: center;
+  align-items: center;
+
   border: none;
   background-color: transparent;
 
   transition: all 200ms ease;
 }
 
-#article-nav-left:hover{
+#nav-button-left{
+  left: 0;
+}
+
+#nav-button-right{
+  right: 0;
+}
+
+#nav-button-left:hover{
   transform: scale(1.25) translateX(-1px);
 }
 
-#article-nav-right:hover{
+#nav-button-right:hover{
   transform: scale(1.25) translateX(1px);
 }
 
 main{
   width: 100%;
-  height: calc(100% - 70px);
+  height: calc(100% - 100px);
   position: relative;
 
   overflow: hidden;
 }
 
 main > article{
+  padding-top: 5em;
+
   height: 100%;
   position: absolute;
   left: 0;
@@ -89,37 +110,35 @@ main > article[data-status="after"]{
   transform: translateX(100%);
 }
 
-.article-section{
+.page-section{
   height: 100%;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
   overflow-y: auto;
   overflow-x: hidden;
 }
 
-#article-nav-left{
-  left: 0;
-}
-
-#article-nav-right{
-  right: 0;
-}
-
 #article-img-section{
-  width: 52.5%;
+  width: 60%;
 }
 
 #article-img-section > img{
   width: 100%;
+
+  border-radius: 10px;
+  box-shadow: 0 3px 3px 0 var(--transparent-partial);
 }
 
-#article-content-section{
-  width: 32.5%;
+#home #article-content-section{
+  width: 75%;
+  
+  text-align: center;
+}
 
+#project #article-content-section{
+  width: 27.5%;
   overflow-y: auto;
 }
 
@@ -127,18 +146,50 @@ main > article[data-status="after"]{
   padding: 0em 1em;
 }
 
+#project #content-title h2{
+  margin: 0 0 0.5em 0;
+  display: flex;
+  align-self: center;
+
+  font-size: xx-large;
+  font-family: "Righteous";
+}
+
+#home #content-title h2{
+  margin: 0.5em 0 0.5em 0;
+  line-height: 100px;
+
+  font-size: 80px;
+  font-family: "Nabla";
+  
+  background: linear-gradient(90deg, #661B71 0%, #F8C854 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#article-content-section > #content-description p{
+  margin: 0 0 1em 0;
+}
+
 #article-content-section > #content-accomplishments{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
   font-weight: bold;
 }
 
 #article-content-section > #content-links{
   display: flex;
   flex-direction: row;
+  align-self: center;
 }
 
 #article-content-section > #content-links a{
-  font-size: xx-large;
   padding: 0.5em;
+  
+  font-size: xx-large;
   color: inherit;
 }
 
@@ -148,12 +199,14 @@ main > article[data-status="after"]{
 
 nav{
   width: 100%;
+  height: 100px;
   bottom: 1vh;
   position: absolute;
   z-index: 2;
 
   display: flex;
   justify-content: center;
+  align-items: center;
 
   overflow-y: hidden;
   overflow-x: auto;
@@ -176,13 +229,7 @@ nav > .nav-item{
   filter: grayscale(1);
 }
 
-nav > .nav-item:hover{
-  margin: 0em 1em;
-  transform: scale(1.25);
-  filter: grayscale(0);
-}
-
-nav > .nav-item[data-status="active"]{
+nav > .nav-item:hover, nav > .nav-item[data-status="active"]{
   margin: 0em 1em;
   transform: scale(1.25);
   filter: grayscale(0);
@@ -192,15 +239,22 @@ nav > .nav-item > img{
   height: 100%;
   width: 100%;
   object-fit: cover;
+  border-radius: 20%;
+  box-shadow: 0 0 5px var(--transparent-partial);
+}
+
+nav > .nav-item:hover > img, nav > .nav-item[data-status="active"]> img{
+  box-shadow: 0 0 15px 1px var(--transparent-partial);
 }
 
 nav::-webkit-scrollbar{
   width: 8px;
   height: 5px;
-  background-color: var(--transparent);
+  background-color: transparent;
 }
+
 nav::-webkit-scrollbar-thumb{
-  background-color: var(--transparent-dark);
+  background-color: var(--transparent-partial);
 }
 
 
@@ -221,14 +275,14 @@ nav::-webkit-scrollbar-thumb{
     align-items: center;
   }
 
-  #article-img-section{
-    width: 90%;
+  #project #article-img-section{
+    width: 85%;
 
-    padding: 0em;
+    padding: 1em 0 0 0;
   }
   
-  #article-content-section{
-    width: 90%;
+  #project #article-content-section{
+    width: 85%;
     overflow: hidden;
   }
 }

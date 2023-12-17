@@ -10,91 +10,66 @@
   <link rel="stylesheet" href="css/main.css">
   <script src="https://kit.fontawesome.com/2b13c75616.js" crossorigin="anonymous"></script>
   <script src="js/nav.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="//fonts.googleapis.com/css2?family=Nabla&family=Outfit:wght@300&family=Righteous&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-  <button id="article-nav-left" class="article-section" type="button" onclick="handleClickLeft()">
+  <img class="background" src="https://picsum.photos/1920/1080" alt="">
+
+  <button id="nav-button-left" class="page-section" type="button" onclick="handleClickLeft()">
     <i class="fa-solid fa-arrow-left"></i>
   </button>
-  <button id="article-nav-right" class="article-section" type="button" onclick="handleClickRight()">
+  <button id="nav-button-right" class="page-section" type="button" onclick="handleClickRight()">
     <i class="fa-solid fa-arrow-right"></i>
   </button>
+
   <main>
-    <article class="article" data-index="0" data-status="inactive">
-      <div id="article-img-section" class="article-section">
+    <article id="project" class="article" data-index="0" data-status="inactive">
+      <div id="article-img-section" class="page-section">
         <img src="https://picsum.photos/seed/-1/1920/1080" alt="">
       </div>
-      <div id="article-content-section" class="article-section">
+      <div id="article-content-section" class="page-section">
         <div id="content-title" class="content-section">
-          <h2>Lorem, ipsum.</h2>
+          <h2>About Me</h2>
         </div>
         <div id="content-description" class="content-section">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, eius laborum praesentium odio porro
-            tempore
-            sequi saepe vero. Voluptas ullam laborum eum iure, quaerat libero sit, voluptate natus vero, eos nisi!
-            Beatae voluptates id nihil autem sint quo, molestiae maxime? Doloribus totam itaque officiis ea! Optio,
-            saepe ab? Vitae, minima? 0</p>
+          <p>Hi.</p>
         </div>
-        <div id="content-accomplishments" class="content-section">
-          <li>Lorem</li>
-          <li>Lorem</li>
-          <li>Lorem</li>
-          <li>Lorem</li>
-          <li>Lorem</li>
+      </div>
+    </article>
+    <article id="home" class="article" data-index="1" data-status="active">
+      <div id="article-content-section" class="page-section">
+        <div id="content-title" class="content-section">
+          <h2>Gameplay Programmer</h2>
+        </div>
+        <div id="content-description" class="content-section">
+          <p>Hello! I'm <b>Joshua Pelkington</b>, a gameplay programmer with 5+ years of game development and
+            programming experience. I love the precision required for programming complex systems that work in
+            tandem with art and design. My philosophy of developing beyond the ordinary has resulted in the
+            projects I make now. Alongside this mindset, I take every opportunity to add a creative flair to the
+            games I make.</p>
         </div>
         <div id="content-links" class="content-section">
           <a href="#">
-            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-linkedin"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-github"></i>
+            <i class="fa-solid fa-envelope"></i>
           </a>
-          <a href="#">
-            <i class="fa-brands fa-github"></i>
+          <a href="https://joshuapelican.itch.io">
+            <i class="fa-brands fa-itch-io"></i>
           </a>
         </div>
       </div>
     </article>
-    <article class="article" data-index="1" data-status="active">
-      <div id="article-img-section" class="article-section">
-        <img src="https://picsum.photos/seed/1/1920/1080" alt="">
-      </div>
-      <div id="article-content-section" class="article-section">
-        <div id="content-title" class="content-section">
-          <h2>Lorem, ipsum.</h2>
-        </div>
-        <div id="content-description" class="content-section">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, eius laborum praesentium odio porro
-            tempore
-            sequi saepe vero. Voluptas ullam laborum eum iure, quaerat libero sit, voluptate natus vero, eos nisi!
-            Beatae voluptates id nihil autem sint quo, molestiae maxime? Doloribus totam itaque officiis ea! Optio,
-            saepe ab? Vitae, minima? 1</p>
-        </div>
-        <div id="content-accomplishments" class="content-section">
-          <li>Lorem</li>
-          <li>Lorem</li>
-          <li>Lorem</li>
-          <li>Lorem</li>
-          <li>Lorem</li>
-        </div>
-        <div id="content-links" class="content-section">
-          <a href="#">
-            <i class="fa-brands fa-github"></i>
-          </a>
-          <a href="#">
-            <i class="fa-brands fa-github"></i>
-          </a>
-          <a href="#">
-            <i class="fa-brands fa-github"></i>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="article" data-index="2" data-status="inactive">
-      <div id="article-img-section" class="article-section">
+    <article id="project" class="article" data-index="2" data-status="inactive">
+      <div id="article-img-section" class="page-section">
         <img src="https://picsum.photos/seed/2/1920/1080" alt="">
       </div>
-      <div id="article-content-section" class="article-section">
+      <div id="article-content-section" class="page-section">
         <div id="content-title" class="content-section">
           <h2>Lorem, ipsum.</h2>
         </div>
@@ -125,11 +100,11 @@
         </div>
       </div>
     </article>
-    <article class="article" data-index="3" data-status="inactive">
-      <div id="article-img-section" class="article-section">
+    <article id="project" class="article" data-index="3" data-status="inactive">
+      <div id="article-img-section" class="page-section">
         <img src="https://picsum.photos/seed/3/1920/1080" alt="">
       </div>
-      <div id="article-content-section" class="article-section">
+      <div id="article-content-section" class="page-section">
         <div id="content-title" class="content-section">
           <h2>Lorem, ipsum.</h2>
         </div>
@@ -160,11 +135,11 @@
         </div>
       </div>
     </article>
-    <article class="article" data-index="4" data-status="inactive">
-      <div id="article-img-section" class="article-section">
+    <article id="project" class="article" data-index="4" data-status="inactive">
+      <div id="article-img-section" class="page-section">
         <img src="https://picsum.photos/seed/4/1920/1080" alt="">
       </div>
-      <div id="article-content-section" class="article-section">
+      <div id="article-content-section" class="page-section">
         <div id="content-title" class="content-section">
           <h2>Lorem, ipsum.</h2>
         </div>
@@ -195,11 +170,11 @@
         </div>
       </div>
     </article>
-    <article class="article" data-index="5" data-status="inactive">
-      <div id="article-img-section" class="article-section">
+    <article id="project" class="article" data-index="5" data-status="inactive">
+      <div id="article-img-section" class="page-section">
         <img src="https://picsum.photos/seed/5/1920/1080" alt="">
       </div>
-      <div id="article-content-section" class="article-section">
+      <div id="article-content-section" class="page-section">
         <div id="content-title" class="content-section">
           <h2>Lorem, ipsum.</h2>
         </div>
