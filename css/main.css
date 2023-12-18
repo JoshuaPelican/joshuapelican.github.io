@@ -6,7 +6,7 @@
 
 p, li{
   font-family: "Outfit";
-  font-size: 14pt;
+  font-size: 12pt;
 }
 
 a > *{
@@ -27,6 +27,7 @@ body > .background{
   height: 100%;
   position: fixed;
   object-fit: cover;
+  filter: grayscale(1);
 
   opacity: 0.1;
 }
@@ -73,7 +74,7 @@ main{
 }
 
 main > article{
-  padding-top: 4em;
+  padding-top: 5em;
 
   width: 90%;
   height: 100%;
@@ -127,7 +128,7 @@ main > article[data-status="after"]{
   width: 60%;
 }
 
-#article-img-section > img{
+#article-img-section > img, #article-img-section > video{
   max-height: 75%;
   max-width: 100%;
 
@@ -147,7 +148,7 @@ main > article[data-status="after"]{
 }
 
 #article-content-section > .content-section{
-  padding: 0em 1em;
+  padding: 0em 0 0 1em;
 }
 
 #article-content-section::-webkit-scrollbar{
@@ -208,6 +209,10 @@ main > article[data-status="after"]{
   align-items: center;
   
   font-weight: bold;
+}
+
+#content-accomplishments ul{
+  margin: 0;
 }
 
 #content-links{
