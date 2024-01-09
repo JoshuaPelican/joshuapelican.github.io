@@ -1,12 +1,20 @@
 :root {
+  --white: #EDEDF4;
   --link-color: #F8C854;
   --other: #661B71;
-  --transparent-partial: rgba(0, 0, 0, .25)
+  --background: #202020;
+  --transparent-partial: rgba(0, 0, 0, .25);
 }
 
 p, li{
   font-family: "Outfit";
-  font-size: 12pt;
+  font-size: 14pt;
+  line-height: 20pt;
+  color:  var(--white);
+}
+
+i{
+  color: var(--white);
 }
 
 a > *{
@@ -20,6 +28,8 @@ body{
   display: flex;
   flex-direction: column;
   overflow: hidden;
+
+  background-color: var(--background);
 }
 
 body > .background{
@@ -39,6 +49,7 @@ body > button{
   cursor: pointer;
   position: absolute;
   z-index: 1;
+  font-size: larger;
 
   justify-content: center;
   align-items: center;
@@ -160,12 +171,13 @@ main > article[data-status="after"]{
 }
 
 #project #content-title h2{
-  margin: 0.25em 0 0.5em 0;
+  margin: 0.5em 0 0.5em 0;
   display: flex;
   align-self: center;
 
   font-size: xx-large;
   font-family: "Righteous";
+  color: var(--white);
 }
 
 #home #content-title h2{
@@ -178,24 +190,21 @@ main > article[data-status="after"]{
   font-size: 75px;
   font-family: "Nabla";
   
-  background: linear-gradient(90deg, #661B71 0%, #F8C854 100%);
-  background-size: 300% 100%;
+  background: radial-gradient(#F8C854 0%, #661B71 66%);
+  background-size: 300% 500%;
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   color: transparent;
-  animation: gradient 5s ease infinite;
+  animation: gradient 5s linear infinite;
 }
 
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
 	}
-	50% {
-		background-position: 100% 50%;
-	}
 	100% {
-		background-position: 0% 50%;
+		background-position: 150% 50%;
 	}
 }
 
@@ -245,7 +254,7 @@ main > article[data-status="after"]{
 
 nav{
   width: 100%;
-  height: 100px;
+  height: 125px;
   bottom: 1vh;
   position: absolute;
   z-index: 2;
@@ -253,14 +262,15 @@ nav{
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 0.25em;
 
   overflow-y: hidden;
   overflow-x: auto;
 }
 
 nav > .nav-item{
-  height: 64px;
-  width: 64px;
+  height: 80px;
+  width: 80px;
   padding: 0.5em;
 
   display: flex;
@@ -272,7 +282,7 @@ nav > .nav-item{
   cursor: pointer;
   
   transition: all 200ms;
-  filter: grayscale(1);
+  filter: grayscale(1) contrast(0.5);
 }
 
 nav > .nav-item:hover, nav > .nav-item[data-status="active"]{

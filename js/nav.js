@@ -1,4 +1,4 @@
-let activeIndex = 1;
+let activeIndex = 0;
 
 const articles = document.getElementsByClassName("article");
 

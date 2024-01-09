@@ -27,7 +27,7 @@
   </button>
 
   <main>
-    <article id="project" class="article" data-index="0" data-status="inactive">
+    <!--     <article id="project" class="article" data-index="0" data-status="inactive">
       <div id="article-img-section" class="page-section">
         <img src="images/josh.jpg" alt="">
       </div>
@@ -39,8 +39,8 @@
           <p>Hi.</p>
         </div>
       </div>
-    </article>
-    <article id="home" class="article" data-index="1" data-status="active">
+    </article> -->
+    <article id="home" class="article" data-index="0" data-status="active">
       <div id="article-content-section" class="page-section">
         <div id="content-title" class="content-section">
           <h2>Gameplay Programmer</h2>
@@ -56,7 +56,7 @@
           <a href="https://www.linkedin.com/in/joshua-pelkington/" target="_blank">
             <i class="fa-brands fa-linkedin"></i>
           </a>
-          <a href="https://github.com/JoshuaPelican" target="_blank">
+          <a href="https://github.com/JoshuaPelican/Code-Showcase/tree/main" target="_blank">
             <i class="fa-brands fa-github"></i>
           </a>
           <a href="https://joshuapelican.itch.io" target="_blank">
@@ -67,7 +67,7 @@
           &nbsp&nbsp<i>848-221-9952</i></p>
       </div>
     </article>
-    <article id="project" class="article" data-index="2" data-status="inactive">
+    <article id="project" class="article" data-index="1" data-status="inactive">
       <div id="article-img-section" class="page-section">
         <video src="videos/trouble-in-tornado-town-demo.mp4" autoplay muted loop></video>
       </div>
@@ -88,13 +88,73 @@
           </ul>
         </div>
         <div id="content-links" class="content-section">
-          <a href="#">
+          <a href="https://store.steampowered.com/app/2180060/Trouble_in_Tornado_Town/" target="_blank">
+            <i class="fa-brands fa-steam"></i>
+          </a>
+          <a href="https://github.com/JoshuaPelican/Code-Showcase/tree/main?tab=readme-ov-file#trouble-in-tornado-town"
+            target="_blank">
             <i class="fa-brands fa-github"></i>
           </a>
-          <a href="#">
+        </div>
+      </div>
+    </article>
+    <article id="project" class="article" data-index="2" data-status="inactive">
+      <div id="article-img-section" class="page-section">
+        <video src="videos/sample.mp4" autoplay muted loop></video>
+      </div>
+      <div id="article-content-section" class="page-section">
+        <div id="content-title" class="content-section">
+          <h2>Match Free</h2>
+        </div>
+        <div id="content-description" class="content-section">
+          <p>NYI</p>
+        </div>
+        <div id="content-accomplishments" class="content-section">
+          <ul>
+            <li>NYI</li>
+          </ul>
+        </div>
+        <div id="content-links" class="content-section">
+          <a href="https://joshuapelican.itch.io/match-free" target="_blank">
+            <i class="fa-brands fa-itch-io"></i>
+          </a>
+          <a href="https://github.com/JoshuaPelican/Code-Showcase/tree/main?tab=readme-ov-file#match-free"
+            target="_blank">
             <i class="fa-brands fa-github"></i>
           </a>
-          <a href="#">
+        </div>
+      </div>
+    </article>
+    <article id="project" class="article" data-index="3" data-status="inactive">
+      <div id="article-img-section" class="page-section">
+        <video src="videos/desert-darts-demo.mp4" autoplay muted loop></video>
+      </div>
+      <div id="article-content-section" class="page-section">
+        <div id="content-title" class="content-section">
+          <h2>Desert Darts</h2>
+        </div>
+        <div id="content-description" class="content-section">
+          <p>Desert Darts is an endless arcade game and my first mobile project. Using the devices gyroscopic
+            information, the player controls a target with the goal of landing precice hits in succession. Desert Darts
+            features an adaptive
+            difficulty system and complex dart pattern generation for engaging and replayable gameplay. Desert Darts was
+            also
+            created with the aim of an accessable icon-only interface. I was the sole creator of this project.</p>
+        </div>
+        <div id="content-accomplishments" class="content-section">
+          <ul>
+            <li>Adaptive Difficulty</li>
+            <li>Procedural Dart Patterns</li>
+            <li>Android Compatable</li>
+            <li>Accessable Icon-Only Interface</li>
+          </ul>
+        </div>
+        <div id="content-links" class="content-section">
+          <a href="https://joshuapelican.itch.io/desert-darts-mobile" target="_blank">
+            <i class="fa-brands fa-itch-io"></i>
+          </a>
+          <a href="https://github.com/JoshuaPelican/Code-Showcase/tree/main?tab=readme-ov-file#desert-darts"
+            target="_blank">
             <i class="fa-brands fa-github"></i>
           </a>
         </div>
@@ -103,15 +163,20 @@
   </main>
 
   <nav>
-    <button href="" id="nav-" class="nav-item" type="button" onclick="handleClickDirect(0)" data-index="0">
+    <!--     <button href="" id="nav-" class="nav-item" type="button" onclick="handleClickDirect(0)" data-index="0">
       <img src="images/josh.jpg" alt="">
+    </button> -->
+    <button href="" class="nav-item" type="button" onclick="handleClickDirect(0)" data-index="0" data-status="active">
+      <img src="images/home.JPG" alt="Home">
     </button>
-    <button href="" id="nav-" class="nav-item" type="button" onclick="handleClickDirect(1)" data-index="1"
-      data-status="active">
-      <img src="images/home.JPG" alt="">
+    <button href="" class="nav-item" type="button" onclick="handleClickDirect(1)" data-index="1">
+      <img src="images/covers/trouble-in-tornado-town-cover.png" alt="Trouble in Tornado Town">
     </button>
-    <button href="" id="nav-" class="nav-item" type="button" onclick="handleClickDirect(2)" data-index="2">
-      <img src="images/covers/trouble-in-tornado-town-cover.png" alt="">
+    <button href="" class="nav-item" type="button" onclick="handleClickDirect(2)" data-index="2">
+      <img src="images/covers/match-free-cover.png" alt="Match Free">
+    </button>
+    <button href="" class="nav-item" type="button" onclick="handleClickDirect(3)" data-index="3">
+      <img src="images/covers/desert-darts-cover.png" alt="Desert Darts">
     </button>
   </nav>
 
