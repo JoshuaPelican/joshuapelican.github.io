@@ -1,9 +1,10 @@
 :root {
+  --accent-1: #F8C854;
+  --accent-2: #661B71;
   --white: #EDEDF4;
-  --link-color: #F8C854;
-  --other: #661B71;
-  --background: #202020;
-  --transparent-partial: rgba(0, 0, 0, .25);
+  --black: #202020;
+  --transparent-light: rgba(255, 255, 255, .25);
+  --transparent-dark: rgba(0, 0, 0, .25);
 }
 
 p, li{
@@ -18,7 +19,7 @@ i{
 }
 
 a > *{
-  color: var(--link-color);
+  color: var(--accent-1);
 }
 
 body{
@@ -29,7 +30,7 @@ body{
   flex-direction: column;
   overflow: hidden;
 
-  background-color: var(--background);
+  background-color: rgb(10, 0, 15);
 }
 
 body > .background{
@@ -39,7 +40,7 @@ body > .background{
   object-fit: cover;
   filter: grayscale(1);
 
-  opacity: 0.1;
+  opacity: 0.15;
 }
 
 body > button{
@@ -88,7 +89,7 @@ main > article{
   padding-top: 5em;
 
   width: 90%;
-  height: 100%;
+  height: calc(100% - 100px);
   position: absolute;
   left: 0;
   right: 0;
@@ -144,7 +145,7 @@ main > article[data-status="after"]{
   max-width: 100%;
 
   border-radius: 10px;
-  box-shadow: 0 3px 3px 0 var(--transparent-partial);
+  box-shadow: 0 3px 3px 0 var(--transparent-dark);
 }
 
 #home #article-content-section{
@@ -159,7 +160,7 @@ main > article[data-status="after"]{
 }
 
 #article-content-section > .content-section{
-  padding: 0em 0 0 1em;
+  padding: 0em 1em;
 }
 
 #article-content-section::-webkit-scrollbar{
@@ -167,7 +168,7 @@ main > article[data-status="after"]{
   background: transparent; 
 }
 #article-content-section::-webkit-scrollbar-thumb{
-  background: var(--transparent-partial);
+  background: var(--transparent-light);
 }
 
 #project #content-title h2{
@@ -206,6 +207,24 @@ main > article[data-status="after"]{
 	100% {
 		background-position: 150% 50%;
 	}
+}
+
+#content-stats ul{
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25em;
+}
+
+#content-stats li{
+  padding: 0.2em 0.5em;
+
+  color: var(--black);
+  background-color: var(--accent-1);
+  border-radius: 5px;
+  list-style: none;
+  font-weight: bold;
 }
 
 #content-description p{

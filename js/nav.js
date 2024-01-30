@@ -7,38 +7,38 @@ let nextArticle = null;
 
 const handleClickDirect = (i) => {
 
-    if(i == activeIndex){
+    if (i == activeIndex) {
         return;
     }
 
     nextIndex = i;
 
     const dirIsRight = i > activeIndex;
-    if(dirIsRight){
-        currentArticle = document.querySelector('[data-index="'+activeIndex+'"]');
-        nextArticle = document.querySelector('[data-index="'+nextIndex+'"]');
-    
+    if (dirIsRight) {
+        currentArticle = document.querySelector('[data-index="' + activeIndex + '"]');
+        nextArticle = document.querySelector('[data-index="' + nextIndex + '"]');
+
         currentArticle.dataset.status = "before";
-        document.querySelectorAll('[data-index="'+activeIndex+'"]')[1].dataset.status = "inactive";
+        document.querySelectorAll('[data-index="' + activeIndex + '"]')[1].dataset.status = "inactive";
         nextArticle.dataset.status = "becoming-active-from-before"
-        
-        setTimeout(() =>{
+
+        setTimeout(() => {
             nextArticle.dataset.status = "active";
-            document.querySelectorAll('[data-index="'+nextIndex+'"]')[1].dataset.status = "active";
+            document.querySelectorAll('[data-index="' + nextIndex + '"]')[1].dataset.status = "active";
             activeIndex = nextIndex;
         });
     }
-    else{
-        currentArticle = document.querySelector('[data-index="'+activeIndex+'"]');
-        nextArticle = document.querySelector('[data-index="'+nextIndex+'"]');
-        
+    else {
+        currentArticle = document.querySelector('[data-index="' + activeIndex + '"]');
+        nextArticle = document.querySelector('[data-index="' + nextIndex + '"]');
+
         currentArticle.dataset.status = "after";
-        document.querySelectorAll('[data-index="'+activeIndex+'"]')[1].dataset.status = "inactive";
+        document.querySelectorAll('[data-index="' + activeIndex + '"]')[1].dataset.status = "inactive";
         nextArticle.dataset.status = "becoming-active-from-after";
-        
-        setTimeout(() =>{
+
+        setTimeout(() => {
             nextArticle.dataset.status = "active";
-            document.querySelectorAll('[data-index="'+nextIndex+'"]')[1].dataset.status = "active";
+            document.querySelectorAll('[data-index="' + nextIndex + '"]')[1].dataset.status = "active";
             activeIndex = nextIndex;
         });
     }
@@ -46,36 +46,36 @@ const handleClickDirect = (i) => {
 
 }
 
-const handleClickLeft = () =>{
+const handleClickLeft = () => {
     const nextIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : articles.length - 1;
 
-    currentArticle = document.querySelector('[data-index="'+activeIndex+'"]');
-    nextArticle = document.querySelector('[data-index="'+nextIndex+'"]');
+    currentArticle = document.querySelector('[data-index="' + activeIndex + '"]');
+    nextArticle = document.querySelector('[data-index="' + nextIndex + '"]');
 
     currentArticle.dataset.status = "after";
-    document.querySelectorAll('[data-index="'+activeIndex+'"]')[1].dataset.status = "inactive";
+    document.querySelectorAll('[data-index="' + activeIndex + '"]')[1].dataset.status = "inactive";
     nextArticle.dataset.status = "becoming-active-from-after";
-    
-    setTimeout(() =>{
+
+    setTimeout(() => {
         nextArticle.dataset.status = "active";
-        document.querySelectorAll('[data-index="'+nextIndex+'"]')[1].dataset.status = "active";
+        document.querySelectorAll('[data-index="' + nextIndex + '"]')[1].dataset.status = "active";
         activeIndex = nextIndex;
     });
 }
 
-const handleClickRight = () =>{
+const handleClickRight = () => {
     const nextIndex = activeIndex + 1 <= articles.length - 1 ? activeIndex + 1 : 0;
 
-    currentArticle = document.querySelector('[data-index="'+activeIndex+'"]');
-    nextArticle = document.querySelector('[data-index="'+nextIndex+'"]');
+    currentArticle = document.querySelector('[data-index="' + activeIndex + '"]');
+    nextArticle = document.querySelector('[data-index="' + nextIndex + '"]');
 
     currentArticle.dataset.status = "before";
-    document.querySelectorAll('[data-index="'+activeIndex+'"]')[1].dataset.status = "inactive";
+    document.querySelectorAll('[data-index="' + activeIndex + '"]')[1].dataset.status = "inactive";
     nextArticle.dataset.status = "becoming-active-from-before";
-    
-    setTimeout(() =>{
+
+    setTimeout(() => {
         nextArticle.dataset.status = "active";
-        document.querySelectorAll('[data-index="'+nextIndex+'"]')[1].dataset.status = "active";
+        document.querySelectorAll('[data-index="' + nextIndex + '"]')[1].dataset.status = "active";
         activeIndex = nextIndex;
     });
 }
