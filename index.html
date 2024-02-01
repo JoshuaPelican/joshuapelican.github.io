@@ -17,7 +17,8 @@
 </head>
 
 <body>
-  <img class="background" src="https://picsum.photos/1920/1080" alt="">
+  <img class="background" src="images/backgrounds/home-bg.png" alt="Background image for the current page">
+  <img class="background" src="images/backgrounds/home-bg.png" alt="Background image for the current page">
 
   <button id="nav-button-left" class="page-section" type="button" onclick="handleClickLeft()">
     <i class="fa-solid fa-arrow-left"></i>
@@ -27,12 +28,12 @@
   </button>
 
   <main>
-    <!--     <article id="project" class="article" data-index="0" data-status="inactive">
+    <!-- <article class="about page" data-index="0" data-status="inactive">
       <div id="article-img-section" class="page-section">
         <img src="images/josh.jpg" alt="">
       </div>
       <div id="article-content-section" class="page-section">
-        <div id="content-title" class="content-section">
+        <div id="title" class="content-section">
           <h2>About Me</h2>
         </div>
         <div id="content-description" class="content-section">
@@ -40,19 +41,19 @@
         </div>
       </div>
     </article> -->
-    <article id="home" class="article" data-index="0" data-status="active">
-      <div id="article-content-section" class="page-section">
-        <div id="content-title" class="content-section">
-          <h2>Gameplay Programmer</h2>
-        </div>
-        <div id="content-description" class="content-section">
-          <p>Hello! I'm <i><b>Joshua Pelkington</b></i>, a gameplay programmer with 5+ years of game development and
-            programming experience. I love the precision required for programming complex systems that work in
-            tandem with art and design. My philosophy of developing beyond the ordinary has resulted in the
-            projects I make now. Alongside this mindset, I take every opportunity to add a creative flair to the
-            games I make.</p>
-        </div>
-        <div id="content-links" class="content-section">
+    <article id="home" class="home page" data-index="0" data-status="active">
+      <div class="content-section page-section">
+        <h2 class="title">
+          Gameplay Programmer
+        </h2>
+        <p class="description">
+          Hello! I'm <i><b>Joshua Pelkington</b></i>, a gameplay programmer with 5+ years of game development and
+          programming experience. I love the precision required for programming complex systems that work in
+          tandem with art and design. My philosophy of developing beyond the ordinary has resulted in the
+          projects I make now. Alongside this mindset, I take every opportunity to add a creative flair to the
+          games I make.
+        </p>
+        <div class="links">
           <a href="joshua-pelkington-resume.pdf" target="_blank">
             <i class="fa-solid fa-file-invoice"></i>
           </a>
@@ -70,27 +71,33 @@
           &nbsp&nbsp<i>848-221-9952</i></p> <!-- Strange characters for blank space formatting -->
       </div>
     </article>
-    <article id="project" class="article" data-index="1" data-status="inactive">
-      <div id="article-img-section" class="page-section">
+    <article id="trouble-in-tornado-town" class="project page" data-index="1" data-status="inactive">
+      <div class="gallery-section page-section">
         <video src="videos/trouble-in-tornado-town-demo.mp4" autoplay muted loop></video>
       </div>
-      <div id="article-content-section" class="page-section">
-        <div id="content-title" class="content-section">
-          <h2>Trouble in Tornado Town</h2>
-        </div>
-        <div id="content-description" class="content-section">
-          <p>Trouble in Tornado Town is an physics-based destruction game featuring a giant tornado! I was the lead
-            programmer for this student produced project.</p>
-        </div>
-        <div id="content-accomplishments" class="content-section">
-          <ul>
-            <li>Designed & programmed core gameplay loop</li>
-            <li>Complex tornado simulations</li>
-            <li>Optimized for 3000+ physics objects</li>
-            <li>Shipped on steam with multiple updates</li>
-          </ul>
-        </div>
-        <div id="content-links" class="content-section">
+      <div class="content-section page-section">
+        <h2 class="title">
+          Trouble in Tornado Town
+        </h2>
+        <ul class="stats">
+          <li class="team">Team of 10</li>
+          <li class="tools">Unity C#</li>
+          <li class="time">~2 Years</li>
+        </ul>
+        <p class="description">
+          Trouble in Tornado Town is an physics-based destruction game featuring a giant tornado! TTT was produced by a
+          team of 10 college students outside of class time to gain experience shipping a game. I was the lead
+          programmer and created the wacky gameplay systems that make it so fun to play! I optimized the physics and
+          rendering pipelines to work for the thousands of object we wanted on-screen. It is now fully released on
+          Steam following 2 major updates.
+        </p>
+        <ul class="accomplishments">
+          <li>Designed & programmed core gameplay loop</li>
+          <li>Complex tornado simulations</li>
+          <li>Optimized for 3000+ physics objects</li>
+          <li>Shipped on steam with multiple updates</li>
+        </ul>
+        <div class="links">
           <a href="https://store.steampowered.com/app/2180060/Trouble_in_Tornado_Town/" target="_blank">
             <i class="fa-brands fa-steam"></i>
           </a>
@@ -100,66 +107,35 @@
           </a>
         </div>
       </div>
+
     </article>
-    <article id="project" class="article" data-index="2" data-status="inactive">
-      <div id="article-img-section" class="page-section">
-        <video src="videos/sample.mp4" autoplay muted loop></video>
-      </div>
-      <div id="article-content-section" class="page-section">
-        <div id="content-title" class="content-section">
-          <h2>Match Free</h2>
-        </div>
-        <div id="content-description" class="content-section">
-          <p>NYI</p>
-        </div>
-        <div id="content-accomplishments" class="content-section">
-          <ul>
-            <li>NYI</li>
-          </ul>
-        </div>
-        <div id="content-links" class="content-section">
-          <a href="https://joshuapelican.itch.io/match-free" target="_blank">
-            <i class="fa-brands fa-itch-io"></i>
-          </a>
-          <a href="https://github.com/JoshuaPelican/Code-Showcase/tree/main?tab=readme-ov-file#match-free"
-            target="_blank">
-            <i class="fa-brands fa-github"></i>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article id="project" class="article" data-index="3" data-status="inactive">
-      <div id="article-img-section" class="page-section">
+    <article id="desert-darts" class="project page" data-index="2" data-status="inactive">
+      <div class="gallery-section page-section">
         <video src="videos/desert-darts-demo.mp4" autoplay muted loop></video>
       </div>
-      <div id="article-content-section" class="page-section">
-        <div id="content-title" class="content-section">
-          <h2>Desert Darts</h2>
-        </div>
-        <div id="content-stats" class="content-section">
-          <ul>
-            <li class="stat">Solo</li>
-            <li class="stat">Unity C#</li>
-            <li class="stat">~2 Days</li>
-          </ul>
-        </div>
-        <div id="content-description" class="content-section">
-          <p>Desert Darts is an endless arcade game and my first mobile project. Using the devices gyroscopic
-            information, the player controls a target with the goal of landing precice hits in succession. Desert Darts
-            features an adaptive
-            difficulty system and complex dart pattern generation for engaging and replayable gameplay. Desert Darts was
-            also
-            created with the aim of an accessable icon-only interface. I was the sole creator of this project.</p>
-        </div>
-        <div id="content-accomplishments" class="content-section">
-          <ul>
-            <li>Adaptive difficulty</li>
-            <li>Procedural dart patterns</li>
-            <li>Android compatability</li>
-            <li>Accessible, icon-only interface</li>
-          </ul>
-        </div>
-        <div id="content-links" class="content-section">
+      <div class="content-section page-section">
+        <h2 class="title">Desert Darts</h2>
+        <ul class="stats">
+          <li class="team">Solo</li>
+          <li class="tools">Unity C#</li>
+          <li class="time">~2 Days</li>
+        </ul>
+        <p class="description">
+          Desert Darts is an endless arcade game and my first mobile project. Using the devices
+          gyroscopic
+          information, the player controls a target with the goal of landing precice hits in succession. Desert Darts
+          features an adaptive
+          difficulty system and complex dart pattern generation for engaging and replayable gameplay. Desert Darts was
+          also
+          created with the aim of an accessable icon-only interface. I was the sole creator of this project.
+        </p>
+        <ul class="accomplishments">
+          <li>Adaptive difficulty</li>
+          <li>Procedural dart patterns</li>
+          <li>Android compatability</li>
+          <li>Accessible, icon-only interface</li>
+        </ul>
+        <div class="links">
           <a href="https://joshuapelican.itch.io/desert-darts-mobile" target="_blank">
             <i class="fa-brands fa-itch-io"></i>
           </a>
@@ -171,21 +147,17 @@
       </div>
     </article>
   </main>
-
   <nav>
     <!--     <button href="" id="nav-" class="nav-item" type="button" onclick="handleClickDirect(0)" data-index="0">
       <img src="images/josh.jpg" alt="">
     </button> -->
-    <button href="" class="nav-item" type="button" onclick="handleClickDirect(0)" data-index="0" data-status="active">
+    <button class="nav-item" type="button" onclick="handleClickDirect(0)" data-index="0" data-status="active">
       <img src="images/page-icons/home-icon.JPG" alt="Home">
     </button>
-    <button href="" class="nav-item" type="button" onclick="handleClickDirect(1)" data-index="1">
+    <button class="nav-item" type="button" onclick="handleClickDirect(1)" data-index="1" data-status="inactive">
       <img src="images/page-icons/trouble-in-tornado-town-icon.png" alt="Trouble in Tornado Town">
     </button>
-    <button href="" class="nav-item" type="button" onclick="handleClickDirect(2)" data-index="2">
-      <img src="images/page-icons/match-free-icon.png" alt="Match Free">
-    </button>
-    <button href="" class="nav-item" type="button" onclick="handleClickDirect(3)" data-index="3">
+    <button class="nav-item" type="button" onclick="handleClickDirect(2)" data-index="2" data-status="inactive">
       <img src="images/page-icons/desert-darts-icon.png" alt="Desert Darts">
     </button>
   </nav>

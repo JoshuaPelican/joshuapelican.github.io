@@ -1,9 +1,11 @@
+
 let activeIndex = 0;
 
-const articles = document.getElementsByClassName("article");
+const pages = document.getElementsByClassName("page");
 
-let currentArticle = document.querySelector('[data-status="active"]');
-let nextArticle = null;
+let currentPage = document.querySelector('[data-status="active"]');
+let nextPage = null;
+let backBool = false;
 
 const handleClickDirect = (i) => {
 
@@ -15,30 +17,32 @@ const handleClickDirect = (i) => {
 
     const dirIsRight = i > activeIndex;
     if (dirIsRight) {
-        currentArticle = document.querySelector('[data-index="' + activeIndex + '"]');
-        nextArticle = document.querySelector('[data-index="' + nextIndex + '"]');
+        currentPage = document.querySelector('[data-index="' + activeIndex + '"]');
+        nextPage = document.querySelector('[data-index="' + nextIndex + '"]');
 
-        currentArticle.dataset.status = "before";
+        currentPage.dataset.status = "before";
         document.querySelectorAll('[data-index="' + activeIndex + '"]')[1].dataset.status = "inactive";
-        nextArticle.dataset.status = "becoming-active-from-before"
+        nextPage.dataset.status = "becoming-active-from-before"
 
         setTimeout(() => {
-            nextArticle.dataset.status = "active";
+            nextPage.dataset.status = "active";
             document.querySelectorAll('[data-index="' + nextIndex + '"]')[1].dataset.status = "active";
+            backgroundFade(nextPage.id);
             activeIndex = nextIndex;
         });
     }
     else {
-        currentArticle = document.querySelector('[data-index="' + activeIndex + '"]');
-        nextArticle = document.querySelector('[data-index="' + nextIndex + '"]');
+        currentPage = document.querySelector('[data-index="' + activeIndex + '"]');
+        nextPage = document.querySelector('[data-index="' + nextIndex + '"]');
 
-        currentArticle.dataset.status = "after";
+        currentPage.dataset.status = "after";
         document.querySelectorAll('[data-index="' + activeIndex + '"]')[1].dataset.status = "inactive";
-        nextArticle.dataset.status = "becoming-active-from-after";
+        nextPage.dataset.status = "becoming-active-from-after";
 
         setTimeout(() => {
-            nextArticle.dataset.status = "active";
+            nextPage.dataset.status = "active";
             document.querySelectorAll('[data-index="' + nextIndex + '"]')[1].dataset.status = "active";
+            backgroundFade(nextPage.id);
             activeIndex = nextIndex;
         });
     }
@@ -47,35 +51,50 @@ const handleClickDirect = (i) => {
 }
 
 const handleClickLeft = () => {
-    const nextIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : articles.length - 1;
+    const nextIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : pages.length - 1;
 
-    currentArticle = document.querySelector('[data-index="' + activeIndex + '"]');
-    nextArticle = document.querySelector('[data-index="' + nextIndex + '"]');
+    currentPage = document.querySelector('[data-index="' + activeIndex + '"]');
+    nextPage = document.querySelector('[data-index="' + nextIndex + '"]');
 
-    currentArticle.dataset.status = "after";
+    currentPage.dataset.status = "after";
     document.querySelectorAll('[data-index="' + activeIndex + '"]')[1].dataset.status = "inactive";
-    nextArticle.dataset.status = "becoming-active-from-after";
+    nextPage.dataset.status = "becoming-active-from-after";
 
     setTimeout(() => {
-        nextArticle.dataset.status = "active";
+        nextPage.dataset.status = "active";
         document.querySelectorAll('[data-index="' + nextIndex + '"]')[1].dataset.status = "active";
+        backgroundFade(nextPage.id);
         activeIndex = nextIndex;
     });
 }
 
 const handleClickRight = () => {
-    const nextIndex = activeIndex + 1 <= articles.length - 1 ? activeIndex + 1 : 0;
+    const nextIndex = activeIndex + 1 <= pages.length - 1 ? activeIndex + 1 : 0;
 
-    currentArticle = document.querySelector('[data-index="' + activeIndex + '"]');
-    nextArticle = document.querySelector('[data-index="' + nextIndex + '"]');
+    currentPage = document.querySelector('[data-index="' + activeIndex + '"]');
+    nextPage = document.querySelector('[data-index="' + nextIndex + '"]');
 
-    currentArticle.dataset.status = "before";
+    currentPage.dataset.status = "before";
     document.querySelectorAll('[data-index="' + activeIndex + '"]')[1].dataset.status = "inactive";
-    nextArticle.dataset.status = "becoming-active-from-before";
+    nextPage.dataset.status = "becoming-active-from-before";
 
     setTimeout(() => {
-        nextArticle.dataset.status = "active";
+        nextPage.dataset.status = "active";
         document.querySelectorAll('[data-index="' + nextIndex + '"]')[1].dataset.status = "active";
+        backgroundFade(nextPage.id);
         activeIndex = nextIndex;
     });
+}
+
+const backgroundFade = (backName) => {
+    const backgrounds = document.getElementsByClassName("background");
+
+    backBool = !backBool;
+
+    const i = backBool ? 1 : 0;
+    const j = backBool ? 0 : 1;
+
+    backgrounds[i].classList.add("transition-src");
+    backgrounds[j].src = "images/backgrounds/" + backName + "-bg.png";
+    backgrounds[j].classList.remove("transition-src");
 }
