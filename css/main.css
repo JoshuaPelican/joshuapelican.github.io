@@ -14,7 +14,7 @@ p, li{
   color:  var(--white);
 }
 
-a > *{
+a > *, a{
   color: var(--accent-1);
 }
 
@@ -319,7 +319,7 @@ nav > .nav-item{
 nav > .nav-item:hover, nav > .nav-item[data-status="active"]{
   margin: 0em 1em;
   transform: scale(1.25);
-  filter: grayscale(0);
+  filter: grayscale(0) contrast(1);
 }
 
 nav > .nav-item > *{
