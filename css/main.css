@@ -83,7 +83,7 @@ body > button{
 
 main{
   width: 100%;
-  height: calc(100% - 15vw);
+  height: calc(100% - 15vh);
   position: relative;
 
   overflow: hidden;
@@ -300,8 +300,8 @@ main > article[data-status="after"]{
 
 nav{
   width: 100vw;
-  height: 10vw;
-  bottom: 1vh;
+  height: 15vh;
+  bottom: 1vw;
   position: absolute;
   z-index: 2;
 
@@ -316,7 +316,7 @@ nav{
 
 nav > .nav-item{
   width: 75px;
-  padding: 0.3em;
+  padding: 0.4em;
 
   display: flex;
   flex-shrink: 1;
@@ -362,6 +362,8 @@ nav::-webkit-scrollbar-thumb{
 @media only screen and (max-width: 1024px) {
 
   main{
+    height: calc(100% - 15vw);
+
     overflow-y: auto;
   }
 
@@ -385,11 +387,15 @@ nav::-webkit-scrollbar-thumb{
   
   .project .content-section{
     width: 85%;
-    overflow-y: auto;
+    overflow: none;
   }
 
   .home .title{
     line-height: 60px;
     font-size: 46px;
+  }
+
+  nav{
+    height: 15vw;
   }
 }
