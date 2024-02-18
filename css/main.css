@@ -260,20 +260,28 @@ main > article[data-status="after"]{
 .links{
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .project .links a{
   padding: 1em 0.5em;
-  
-  font-size: xx-large;
+  width: fit-content;
+
+  font-size: x-large;
   color: inherit;
+  text-decoration: none;
 }
 
 .home .links a{
   padding: 0.25em 0.5em;
   
-  font-size: xx-large;
+  font-size: xX-large;
   color: inherit;
+}
+
+.links p{
+  margin: 0;
+  font-size: large;
 }
 
 .home a{
