@@ -83,7 +83,7 @@ body > button{
 
 main{
   width: 100%;
-  height: calc(100% - 15vh);
+  height: calc(100% - 100px);
   position: relative;
 
   overflow: hidden;
@@ -300,8 +300,8 @@ main > article[data-status="after"]{
 
 nav{
   width: 100vw;
-  height: 15vh;
-  bottom: 1vw;
+  height: 100px;
+  bottom: 1vh;
   position: absolute;
   z-index: 2;
 
@@ -362,8 +362,6 @@ nav::-webkit-scrollbar-thumb{
 @media only screen and (max-width: 1024px) {
 
   main{
-    height: calc(100% - 15vw);
-
     overflow-y: auto;
   }
 
@@ -396,6 +394,7 @@ nav::-webkit-scrollbar-thumb{
   }
 
   nav{
-    height: 15vw;
+    height: 100px;
+    align-items: end;
   }
 }
