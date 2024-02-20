@@ -83,7 +83,7 @@ body > button{
 
 main{
   width: 100%;
-  height: calc(100% - 100px);
+  height: calc(100% - 100px - 1vh);
   position: relative;
 
   overflow: hidden;
@@ -190,6 +190,7 @@ main > article[data-status="after"]{
 
   font-size: xx-large;
   font-family: "Righteous";
+  letter-spacing: 2px;
   color: var(--white);
 }
 
@@ -203,13 +204,13 @@ main > article[data-status="after"]{
   font-size: 75px;
   font-family: "Nabla";
   
-  background: radial-gradient(#F8C854 0%, #661B71 66%);
+  background: radial-gradient(#F8C854 0%, #661B71 90%);
   background-size: 300% 500%;
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   color: transparent;
-  animation: gradient 5s linear infinite;
+  animation: gradient 3s linear infinite;
 }
 
 @keyframes gradient {
@@ -316,7 +317,7 @@ nav{
 
 nav > .nav-item{
   width: 75px;
-  padding: 0.4em;
+  padding: 0.1em;
 
   display: flex;
   flex-shrink: 1;
@@ -348,6 +349,7 @@ nav > .nav-item:hover > img, nav > .nav-item[data-status="active"]> img{
   box-shadow: 0 0 15px var(--transparent-partial);
 }
 
+/*
 nav::-webkit-scrollbar{
   width: 8px;
   height: 5px;
@@ -357,6 +359,7 @@ nav::-webkit-scrollbar{
 nav::-webkit-scrollbar-thumb{
   background-color: var(--transparent-partial);
 }
+*/
 
 
 @media only screen and (max-width: 1024px) {
@@ -391,10 +394,5 @@ nav::-webkit-scrollbar-thumb{
   .home .title{
     line-height: 60px;
     font-size: 46px;
-  }
-
-  nav{
-    height: 100px;
-    align-items: end;
   }
 }
