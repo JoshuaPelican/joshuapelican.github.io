@@ -45,10 +45,7 @@ a > *, a {
   aspect-ratio: 1.7777777777777777;
   border-radius: 7px;
 
-  margin: 0;
-  padding: 0;
-  border: none;
-  cursor: pointer;
+  text-decoration: none;
 
   overflow: hidden;
 }
