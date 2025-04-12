@@ -20,91 +20,75 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="//fonts.googleapis.com/css2?family=Nabla&family=Outfit:wght@300&family=Righteous&display=swap"
     rel="stylesheet">
-
+  <script src="https://kit.fontawesome.com/2b13c75616.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  
-  <header>
-    <h1>Joshua Pelkington</h1>
-  </header>
-
+<img src="images/backgrounds/home-bg.png" alt="">
+<header>
+  <h1>Joshua Pelkington</h1>
+  <p>Pretend this is delightful summary of who I am and what I do.</p>
+  <address class="contact-info">
+    <ul class="contact-links">
+      <li>
+        <a href="mailto:pelkingtonj@gmail.com" aria-label="pelkingtonj@gmail.com" target="_blank">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </li>
+      <li>
+        <a href="joshua-pelkington-resume-2025.pdf#view=FitV" aria-label="Resume" target="_blank">
+          <i class="fa-solid fa-file-invoice"></i>
+        </a>
+      </li>
+    </ul>
+    <ul class="social-links">
+      <li>
+        <a href="#" aria-label="LinkedIn" target="_blank">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#" aria-label="GitHub" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#" aria-label="Itch.io" target="_blank">
+          <i class="fa-brands fa-itch-io"></i>
+        </a>
+      </li>
+    </ul>
+  </address>
+</header>
 
   <main>
+    <section class="filter-section">
+      <div class="any-wrapper">
+        <label for="any"><p>Any?</p></label>
+        <input class="any-toggle" type="checkbox" name="any" checked>
+      </div>
+      <ul class="filter-container">
+      </ul>
+    </section>
     <section class="flex-grid">
-      <a class="card" href="#" >
-        <img src="/images/backgrounds/terra-inferno-bg.png" alt="">
-        <div class="hover">
-          <h2>Terra Inferno</h2>
-          <p>Other info here.</p>
-        </div>
-      </a>
-      <a class="card" href="#">
-        <img src="/images/backgrounds/terra-inferno-bg.png" alt="">
-        <div class="hover">
-          <h2>Terra Inferno</h2>
-          <p>Other info here.</p>
-        </div>
-      </a>
-      <a class="card" href="#">
-        <img src="/images/backgrounds/terra-inferno-bg.png" alt="">
-        <div class="hover">
-          <h2>Terra Inferno</h2>
-          <p>Other info here.</p>
-        </div>
-      </a>
-      <a class="card" href="#">
-        <img src="/images/backgrounds/terra-inferno-bg.png" alt="">
-        <div class="hover">
-          <h2>Terra Inferno</h2>
-          <p>Other info here.</p>
-        </div>
-      </a>
-      <a class="card" href="#">
-        <img src="/images/backgrounds/terra-inferno-bg.png" alt="">
-        <div class="hover">
-          <h2>Terra Inferno</h2>
-          <p>Other info here.</p>
-        </div>
-      </a>
-      <a class="card" href="#">
-        <img src="/images/backgrounds/terra-inferno-bg.png" alt="">
-        <div class="hover">
-          <h2>Terra Inferno</h2>
-          <p>Other info here.</p>
-        </div>
-      </a>
-      <a class="card" href="#">
-        <img src="/images/backgrounds/terra-inferno-bg.png" alt="">
-        <div class="hover">
-          <h2>Terra Inferno</h2>
-          <p>Other info here.</p>
-        </div>
-      </a>
-      <a class="card" href="#">
-        <img src="/images/backgrounds/terra-inferno-bg.png" alt="">
-        <div class="hover">
-          <h2>Terra Inferno</h2>
-          <p>Other info here.</p>
-        </div>
-      </a>
     </section>
   </main>
 
 
   <footer>
-    <address>
-      <p>Contact me: <a href="mailto:pelkingtonj@gmail.com">pelkingtonj@gmail.com</a></p>
-      <p>
-        <a href="https://github.com/joshuapelican" aria-label="GitHub profile"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://linkedin.com/in/joshuapelican" aria-label="LinkedIn profile"><i class="fab fa-linkedin"></i>
-          LinkedIn</a>
-      </p>
-    </address>
-    <p>© 2025 Joshua Pelkington. All rights reserved.</p>
+    <!--<p>© 2025 Joshua Pelkington. All rights reserved, unless explicitly stated.</p> -->
   </footer>
+  
+  <script src="js/projects.js"></script>
+  <script src="js/tagfilters.js"></script>
 
-  <script src="https://kit.fontawesome.com/2b13c75616.js" crossorigin="anonymous"></script>
+  <noscript>
+    <style>
+      .filter-container{
+        display: none;
+      }
+    </style>
+  </noscript>
 </body>
 
 </html>
