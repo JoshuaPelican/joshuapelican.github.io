@@ -1,0 +1,8 @@
+id: trouble-in-tornado-town
+name: Trouble In Tornado Town
+desc: Trouble in Tornado Town is an physics-based destruction game featuring a giant tornado! Trouble in Tornado Town was produced by a studio of 10 Drexel students. I was the lead programmer and created the wacky gameplay systems that make it so fun to play! I also optimized the physics and rendering pipelines to work for the thousands of object we wanted flying around on-screen. It is now fully released on Steam alongside 2 major post-launch updates.
+
+tags:
+  tools: [Unity, C#]
+  people: [Team Lead]
+  code: [AI, Physics, Optimization]

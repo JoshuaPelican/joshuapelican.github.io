@@ -1,0 +1,8 @@
+id: terra-inferno
+name: Terra Inferno
+desc: Terra Inferno description.
+
+tags:
+  tools: [Unity, C#]
+  people: [Team Lead]
+  code: [AI, Pathfinding, Procedural Generation]

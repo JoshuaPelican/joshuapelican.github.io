@@ -1,0 +1,237 @@
+:root {
+	--accent-1: #F8C854;
+	--accent-2: #661B71;
+	--white: #EDEDF4;
+	--black: #202020;
+	--transparent-light: rgba(255, 255, 255, .25);
+	--transparent-dark: rgba(0, 0, 0, .25);
+	--transparent-darker: rgba(0, 0, 0, .667);
+	--transparent-darkest: rgba(0, 0, 0, .75);
+
+
+	--filter-anim: #F8C854;
+	--filter-art: #D45979;
+	--filter-audio: #A2E1D8;
+	--filter-code: #4DAD78;
+	--filter-docs: #4B5798;
+	--filter-people: #EEA05D;
+	--filter-tools: #AD5FAD;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	background-color: var(--black);
+	color: var(--white);
+	margin: 0;
+}
+
+h2{
+	font-size: 20px;
+}
+
+i {
+	color: var(--accent-1);
+}
+
+body > img{
+	height: 125vh;
+	aspect-ratio: 16/9;
+	position: fixed;
+	top: 0;
+	left: -12.5vh;
+	z-index: -2;
+	filter: opacity(10%) grayscale(100%);
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contact-info {
+	display: flex;
+	justify-content: center;
+	margin: 1em 0;
+	gap: 20px;
+}
+
+.contact-info i{
+	font-size: 24px;
+}
+
+.contact-info i:hover{
+	color: var(--accent-2);
+	transition: color 0.15s;
+}
+
+section{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 1em;
+}
+
+.any-toggle-wrapper{
+	display: flex;
+	flex-direction: column;
+	margin-right: 0.5em;
+}
+
+.any-toggle-wrapper p{
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+}
+
+.filter-container{
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	gap: 0.25em;
+	padding-left: 0;
+	margin: 0;
+}
+
+.filter{
+	border-radius: 9999px;
+	padding: 2px 6px;
+	vertical-align: middle;
+
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	transition: background 0.2s;
+}
+
+.filter[data-active = false] {
+	background-color: transparent !important;
+	color: var(--white) !important;
+}
+
+.flex-grid{
+	width: calc(100% - 2em);
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	padding: 0 1em;
+}
+
+.card {
+	max-width: 600px;
+	aspect-ratio: 1.7777777777777777;
+	border-radius: 5px;
+	text-decoration: none;
+	flex-grow: 1;
+	overflow: hidden;
+
+	position: relative;
+	/* Add this */
+
+	transition: all 200ms ease-in;
+}
+
+.card>img {
+	width: 100%;
+	/* Change from height to width */
+	height: 100%;
+	object-fit: cover;
+	/* Add this */
+	position: absolute;
+	/* Change to absolute */
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+.hover {
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 15px;
+
+	transform: translateY(calc(100% - 50px));
+
+	transition: all 300ms ease-in-out;
+	border-radius: 0;
+	background-color: var(--transparent-darker);
+}
+
+.hover>* {
+	margin: 0;
+}
+
+.hover:hover {
+	transform: translateY(0);
+
+	background-color: var(--transparent-darkest);
+}
+
+.card:hover .hover:not(:hover) {
+	transform: translateY(calc(100% - 90px));
+}
+
+
+.tag-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 5px;
+	padding: 0;
+	list-style: none;
+}
+
+.tag {
+	border-radius: 9999px;
+	padding: 2px 6px;
+	font-size: 14px;
+	vertical-align: middle;
+
+	color: var(--black);
+}
+
+.tag.code, .filter.code{
+	background-color: var(--filter-code);
+	box-shadow: 0 0 0 1px  var(--filter-code);
+}
+
+.tag.art, .filter.art{
+	background-color: var(--filter-art);
+	box-shadow: 0 0 0 1px var(--filter-art);  
+}
+
+.tag.anim, .filter.anim {
+	background-color: var(--filter-anim);
+	box-shadow: 0 0 0 1px var(--filter-anim);  
+}
+
+.tag.audio, .filter.audio{
+	background-color: var(--filter-audio);
+	box-shadow: 0 0 0 1px var(--filter-audio);
+}
+
+.tag.tools, .filter.tools {
+	background-color: var(--filter-tools);
+	box-shadow: 0 0 0 1px var(--filter-tools);
+}
+
+.tag.people, .filter.people{
+	background-color: var(--filter-people);
+	box-shadow: 0 0 0 1px var(--filter-people);
+}

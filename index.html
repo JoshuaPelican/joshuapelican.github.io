@@ -15,62 +15,44 @@
   <meta name="theme-color" content="#F8C854">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="//fonts.googleapis.com/css2?family=Nabla&family=Outfit:wght@300&family=Righteous&display=swap"
-    rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
   <script src="https://kit.fontawesome.com/2b13c75616.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<img src="images/backgrounds/home-bg.png" alt="">
+<img src="assets/images/backgrounds/home-bg.png" alt="">
 <header>
   <h1>Joshua Pelkington</h1>
   <p>Pretend this is delightful summary of who I am and what I do.</p>
   <address class="contact-info">
-    <ul class="contact-links">
-      <li>
-        <a href="mailto:pelkingtonj@gmail.com" aria-label="pelkingtonj@gmail.com" target="_blank">
-          <i class="fa-solid fa-envelope"></i>
-        </a>
-      </li>
-      <li>
-        <a href="joshua-pelkington-resume-2025.pdf#view=FitV" aria-label="Resume" target="_blank">
-          <i class="fa-solid fa-file-invoice"></i>
-        </a>
-      </li>
-    </ul>
-    <ul class="social-links">
-      <li>
-        <a href="#" aria-label="LinkedIn" target="_blank">
-          <i class="fa-brands fa-linkedin-in"></i>
-        </a>
-      </li>
-      <li>
-        <a href="#" aria-label="GitHub" target="_blank">
-          <i class="fa-brands fa-github"></i>
-        </a>
-      </li>
-      <li>
-        <a href="#" aria-label="Itch.io" target="_blank">
-          <i class="fa-brands fa-itch-io"></i>
-        </a>
-      </li>
-    </ul>
+    <a href="mailto:pelkingtonj@gmail.com" aria-label="pelkingtonj@gmail.com" target="_blank">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+    <a href="joshua-pelkington-resume-2025.pdf#view=FitV" aria-label="Resume" target="_blank">
+      <i class="fa-solid fa-file-invoice"></i>
+    </a>
+    <a href="#" aria-label="LinkedIn" target="_blank">
+      <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+    <a href="#" aria-label="GitHub" target="_blank">
+      <i class="fa-brands fa-github"></i>
+    </a>
+    <a href="#" aria-label="Itch.io" target="_blank">
+      <i class="fa-brands fa-itch-io"></i>
+    </a>
   </address>
 </header>
 
   <main>
     <section class="filter-section">
-      <div class="any-wrapper">
+      <div class="any-toggle-wrapper">
         <label for="any"><p>Any?</p></label>
         <input class="any-toggle" type="checkbox" name="any" checked>
       </div>
-      <ul class="filter-container">
-      </ul>
+      <div class="filter-container" id="filter-container">
+      </div>
     </section>
-    <section class="flex-grid">
+    <section class="flex-grid" id="project-container">
     </section>
   </main>
 
@@ -79,8 +61,13 @@
     <!--<p>© 2025 Joshua Pelkington. All rights reserved, unless explicitly stated.</p> -->
   </footer>
   
-  <script src="js/projects.js"></script>
-  <script src="js/tagfilters.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/parser.js"></script>
+  <script src="js/history.js"></script>
+  <script src="js/display.js"></script>
+  <script src="js/tags.js"></script>
+  <script src="app.js"></script>
 
   <noscript>
     <style>
