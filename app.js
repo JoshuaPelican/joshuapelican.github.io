@@ -18,12 +18,12 @@ class App {
         Promise.all(activeProjects.map(async projectId => {
             this.projects[projectId] = await parseYamlFile(`assets/projects/${projectId}.yaml`);
         })).then(() => {
-            this.loadTags();
+            this.loadFilters();
             this.displayProjects(activeProjects);
         })
     }
 
-    loadTags(){
+    loadFilters(){
         const tags = getUniqueTagsFlat(Object.values(this.projects))
         tags.forEach(t => {
             const filter = buildFilter(t);
